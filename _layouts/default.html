@@ -10,6 +10,9 @@
   <link rel="alternate" hreflang="{{ t.code }}" href="{{ page.url | absolute_url }}">
   <link rel="alternate" hreflang="{{ t.alt_code }}" href="{{ page.alt_url | absolute_url }}">
   {% seo %}
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/geist-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/instrument-serif-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
