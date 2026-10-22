@@ -2,7 +2,7 @@
 #  Site — https://pages.ironlungs.eu
 # ─────────────────────────────────────────────────────────────
 title: "Quentin · Cybersécurité & Réseaux"
-description: "Quentin, ingénieur cybersécurité & réseaux : parcours, compétences et projets."
+description: "Ingénieur Cybersécurité & Réseaux : parcours, compétences et projets."
 url: "https://pages.ironlungs.eu"
 baseurl: ""
 author: "Quentin"
@@ -17,7 +17,7 @@ lang: fr
 owner:
   name: "Quentin"         # prénom uniquement
   github: "iron-lungs"
-  email: ""               # à renseigner — vide = adresse non publiée
+  email: "verbe_meduses2y@icloud.com"               # à renseigner — vide = adresse non publiée
   linkedin: ""            # vide = non affiché (l'URL actuelle contient des initiales)
 
 # ─────────────────────────────────────────────────────────────
