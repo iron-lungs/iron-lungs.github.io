@@ -5,5 +5,5 @@ locale: fr_FR
 nav: home
 alt_url: /en/
 title: "Portfolio"
-description: "Quentin, ingénieur cybersécurité & réseaux : parcours, compétences et projets."
+description: "Ingénieur cybersécurité & réseaux : parcours, compétences et projets."
 ---

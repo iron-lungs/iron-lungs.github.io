@@ -97,10 +97,10 @@ education:
   - school: "Université de Namur"
     period: "2017 – 2021"
     fr:
-      title: "Licence de Physique (non achevée)"
+      title: "Licence de Physique"
       body: "Bases scientifiques avancées, méthodes analytiques, travail de recherche en équipe, programmation MATLAB et Fortran."
     en:
-      title: "Physics degree (not completed)"
+      title: "Physics degree"
       body: "Advanced scientific grounding, analytical methods, team research work, MATLAB and Fortran programming."
   - school: ""
     period: "2017"
