@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign sk = site.data.skills %}
+{% include page-head.html title=t.skills.title lead=t.skills.lead %}
+
+<!-- ── Domaines techniques ───────────────────────────────── -->
+<section class="section section-tight">
+  <div class="wrap">
+    <h2 class="block-title reveal">{{ t.skills.domains_title }}</h2>
+    <div class="grid-3">
+      {% for d in sk.domains %}
+      <article class="card service reveal">
+        <div class="service-top">
+          <span class="service-icon">{% include icon.html name=d.icon %}</span>
+          <span class="meta">{{ forloop.index | prepend: '0' }}</span>
+        </div>
+        <h3>{{ d[page.lang].title }}</h3>
+        <ul class="chips">
+          {% for i in d[page.lang].items %}<li>{{ i }}</li>{% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── Solutions éditeurs ────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="wrap">
+    <h2 class="block-title reveal">{{ t.skills.vendors_title }}</h2>
+    <ul class="vendors">
+      {% for v in sk.vendors %}
+      <li class="vendor reveal">
+        <h3>{{ v.name }}</h3>
+        <div>
+          <ul class="chips">{% for p in v.products %}<li>{{ p }}</li>{% endfor %}</ul>
+          <p class="muted">{{ v[page.lang] }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ── Compétences transversales ─────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="block-title reveal">{{ t.skills.soft_title }}</h2>
+    <ul class="soft reveal">
+      {% for s in sk.soft[page.lang] %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include contact.html %}

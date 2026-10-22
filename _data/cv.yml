@@ -1,0 +1,132 @@
+# ─────────────────────────────────────────────────────────────
+#  Parcours (page /parcours/) : expériences, formation,
+#  certifications et langues, en français et en anglais.
+#
+#  Règle de publication : aucune donnée personnelle.
+#  Pas de nom de famille, de téléphone, d'adresse ni de ville.
+# ─────────────────────────────────────────────────────────────
+
+experience:
+  - company: "ACESI GROUP"
+    start: "01/2026"
+    end: ""                     # vide = poste actuel
+    fr:
+      title: "Ingénieur Cybersécurité & Réseaux"
+      points:
+        - "Conception d'architectures réseau, sécurité et cloud multi-vendeurs pour des parcs clients"
+        - "Intégration de solutions de sécurité : pare-feu NGFW, EDR/XDR, VPN SSL/IPSec, SIEM, sécurité de la messagerie (SPF/DKIM/DMARC), CASB"
+        - "Référent technique et dernier niveau d'escalade (N2/N3) sur les incidents de sécurité, astreinte SOC"
+        - "Audits de sécurité et plans de remédiation ; expert technique en COMOP et COPIL"
+        - "Pilotage de projets qualité de service : industrialisation des configurations, fiabilisation de la supervision"
+        - "Transmission de compétences et appui technique aux équipes N1-N2"
+    en:
+      title: "Cybersecurity & Network Engineer"
+      points:
+        - "Design of multi-vendor network, security and cloud architectures for client estates"
+        - "Integration of security solutions: NGFW firewalls, EDR/XDR, SSL/IPsec VPN, SIEM, email security (SPF/DKIM/DMARC), CASB"
+        - "Technical lead and last escalation level (L2/L3) for security incidents, SOC on-call duty"
+        - "Security audits and remediation plans; technical expert in operational and steering committees"
+        - "Leading service-quality projects: configuration industrialisation, more reliable monitoring"
+        - "Knowledge transfer and technical support for L1-L2 teams"
+
+  - company: "ACESI GROUP"
+    start: "01/2025"
+    end: "12/2025"
+    fr:
+      title: "Administrateur Cybersécurité"
+      points:
+        - "Administration et MCO/MCS des solutions de sécurité et de réseau des parcs clients"
+        - "Évolution et sécurisation d'architectures réseau, sécurité et cloud multi-vendeurs"
+        - "Plateforme de supervision EasyVista-Observe : box de supervision, sondes, notifications dynamiques (mail → Power Automate → Teams)"
+        - "Incidents de sécurité et support N2 à N3, astreinte SOC, réponse aux événements via XDR"
+        - "Audits de sécurité et plans de remédiation ; référent technique en COMOP et COPIL"
+    en:
+      title: "Cybersecurity Administrator"
+      points:
+        - "Administration and maintenance (MCO/MCS) of client network and security solutions"
+        - "Evolution and hardening of multi-vendor network, security and cloud architectures"
+        - "EasyVista-Observe monitoring platform: monitoring boxes, probes, dynamic notifications (email → Power Automate → Teams)"
+        - "Security incidents and L2 to L3 support, SOC on-call duty, event response through XDR"
+        - "Security audits and remediation plans; technical lead in operational and steering committees"
+
+  - company: "ACESI GROUP"
+    start: "01/2024"
+    end: "12/2024"
+    fr:
+      title: "Technicien Supérieur Cybersécurité"
+      points:
+        - "Maintenance, exploitation et MCO/MCS des solutions de sécurité et de réseau des parcs clients"
+        - "Migration de la supervision de PRTG vers EasyVista-Observe, sans interruption de service"
+        - "Déploiement de sondes et amélioration continue des processus de supervision"
+        - "Rapports de conformité de sécurité, incidents N1 à N2, astreinte SOC"
+    en:
+      title: "Senior Cybersecurity Technician"
+      points:
+        - "Maintenance, operation and MCO/MCS of client network and security solutions"
+        - "Migration of monitoring from PRTG to EasyVista-Observe with no service interruption"
+        - "Probe deployment and continuous improvement of monitoring processes"
+        - "Security compliance reports, L1 to L2 incidents, SOC on-call duty"
+
+  - company: "Yourax by ACESI"
+    start: "10/2022"
+    end: "12/2023"
+    fr:
+      title: "Technicien Cloud & Services"
+      points:
+        - "Supervision des événements et alertes, déploiement de solutions de supervision chez les clients"
+        - "Gestion des tickets ITSM et support utilisateur N0 à N1"
+        - "Réponse aux événements de sécurité via XDR, rapports de conformité"
+        - "Accompagnement des clients dans la migration de la supervision PRTG"
+    en:
+      title: "Cloud & Services Technician"
+      points:
+        - "Event and alert monitoring, deployment of monitoring solutions at client sites"
+        - "ITSM ticket handling and L0 to L1 user support"
+        - "Security event response through XDR, compliance reports"
+        - "Supporting clients through the PRTG monitoring migration"
+
+education:
+  - school: "AKXIA"
+    period: "2022"
+    fr:
+      title: "Architecte Réseaux, Cybersécurité & Solutions Cisco (Bac+3)"
+      body: "Modules « Technicien Réseau Cisco CCNA » et « Architecte Réseaux – Cybersécurité – Solutions Cisco »."
+    en:
+      title: "Network & Cybersecurity Architect, Cisco Solutions (Bachelor level)"
+      body: "Modules “Cisco CCNA Network Technician” and “Network Architect – Cybersecurity – Cisco Solutions”."
+  - school: "Université de Namur"
+    period: "2017 – 2021"
+    fr:
+      title: "Licence de Physique (non achevée)"
+      body: "Bases scientifiques avancées, méthodes analytiques, travail de recherche en équipe, programmation MATLAB et Fortran."
+    en:
+      title: "Physics degree (not completed)"
+      body: "Advanced scientific grounding, analytical methods, team research work, MATLAB and Fortran programming."
+  - school: ""
+    period: "2017"
+    fr:
+      title: "Baccalauréat scientifique (CESS)"
+      body: "Option Mathématiques, Sciences et Langues."
+    en:
+      title: "Scientific baccalaureate (CESS)"
+      body: "Mathematics, Sciences and Languages track."
+
+certifications:
+  - name: "Fortinet Certified Professional (FCP)"
+    issuer: "Fortinet"
+    date: "2026"
+    parts: ["NSE 4 – FortiGate Administrator 7.4", "NSE 5 – FortiManager Administrator 7.6"]
+  - name: "Cisco CyberOps Associate"
+    issuer: "Cisco Networking Academy"
+    date: "2022"
+    parts: []
+
+languages:
+  fr:
+    - { name: "Français", level: "Langue maternelle" }
+    - { name: "Anglais", level: "B2 — professionnel" }
+    - { name: "Espagnol", level: "Débutant" }
+  en:
+    - { name: "French", level: "Native" }
+    - { name: "English", level: "B2 — professional" }
+    - { name: "Spanish", level: "Beginner" }

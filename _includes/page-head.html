@@ -1,0 +1,15 @@
+{% comment %} En-tête des pages intérieures : fil d'Ariane + titre. Paramètres : include.title, include.lead, include.meta (optionnel). {% endcomment %}
+<section class="hero hero-sm">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="{{ t.breadcrumb }}">
+      <a href="{{ t.routes.home | relative_url }}">{{ t.nav.home }}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ include.title }}</span>
+    </nav>
+    <div class="page-title">
+      <h1>{{ include.title }}</h1>
+      {% if include.meta %}<span class="page-count">{{ include.meta }}</span>{% endif %}
+    </div>
+    <p class="lead">{{ include.lead }}</p>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+# ─────────────────────────────────────────────────────────────
+#  Compétences (page /competences/), en français et en anglais.
+#  domains  → grands domaines techniques (icône + mots-clés)
+#  vendors  → solutions éditeurs maîtrisées
+#  soft     → compétences transversales
+# ─────────────────────────────────────────────────────────────
+
+domains:
+  - icon: "network"
+    fr:
+      title: "Réseaux & Cisco"
+      items: ["Routage", "Commutation", "VLAN / Trunk", "Routage inter-VLAN", "OSPF", "EtherChannel / Eth-Trunk", "ACL", "NAT / PAT", "DHCP", "WLAN", "NAC", "Cisco IOS"]
+    en:
+      title: "Networking & Cisco"
+      items: ["Routing", "Switching", "VLAN / Trunk", "Inter-VLAN routing", "OSPF", "EtherChannel / Eth-Trunk", "ACL", "NAT / PAT", "DHCP", "WLAN", "NAC", "Cisco IOS"]
+  - icon: "shield"
+    fr:
+      title: "Sécurité périmétrique & accès"
+      items: ["Pare-feu NGFW", "VPN SSL / IPSec", "ZTNA", "Security Fabric", "PAM & Bastion"]
+    en:
+      title: "Perimeter security & access"
+      items: ["NGFW firewalls", "SSL / IPsec VPN", "ZTNA", "Security Fabric", "PAM & Bastion"]
+  - icon: "lock"
+    fr:
+      title: "Endpoint & messagerie"
+      items: ["EDR / XDR", "Anti-spam", "SPF / DKIM / DMARC", "Protection des serveurs"]
+    en:
+      title: "Endpoint & email"
+      items: ["EDR / XDR", "Anti-spam", "SPF / DKIM / DMARC", "Server protection"]
+  - icon: "radar"
+    fr:
+      title: "SOC & supervision"
+      items: ["SIEM", "Gestion d'incidents", "Réponse en astreinte", "Supervision par sondes", "Notifications dynamiques"]
+    en:
+      title: "SOC & monitoring"
+      items: ["SIEM", "Incident management", "On-call response", "Probe-based monitoring", "Dynamic notifications"]
+  - icon: "code"
+    fr:
+      title: "Automatisation & API"
+      items: ["Python", "Analyse PCAP", "FortiAPI", "API REST", "Power Automate", "MATLAB", "Fortran"]
+    en:
+      title: "Automation & APIs"
+      items: ["Python", "PCAP analysis", "FortiAPI", "REST APIs", "Power Automate", "MATLAB", "Fortran"]
+  - icon: "flow"
+    fr:
+      title: "Méthodes"
+      items: ["MCO / MCS", "Incidents N0 → N3", "ESN / MSSP", "Audits & remédiation", "ITSM", "COMOP / COPIL", "Amélioration continue"]
+    en:
+      title: "Methods"
+      items: ["Run & security maintenance", "L0 → L3 incidents", "MSP / MSSP", "Audits & remediation", "ITSM", "Ops & steering committees", "Continuous improvement"]
+
+vendors:
+  - name: "Fortinet"
+    products: ["FortiGate 7.0 → 7.6", "FortiManager", "FortiAnalyzer", "FortiClient EMS", "FortiSwitch", "FortiAP"]
+    fr: "Administration avancée et troubleshooting, intégration Security Fabric, migration VPN SSL → IPSec, bases multi-ADOM, déploiement ZTNA, scripts Python de supervision via FortiAPI."
+    en: "Advanced administration and troubleshooting, Security Fabric integration, SSL → IPsec VPN migration, multi-ADOM databases, ZTNA rollout, Python monitoring scripts through FortiAPI."
+  - name: "Trend Micro"
+    products: ["Worry-Free", "Email Security", "Cloud App Security", "Deep Security", "Vision One"]
+    fr: "Administration avancée, déploiement et maintien en condition opérationnelle."
+    en: "Advanced administration, deployment and ongoing maintenance."
+  - name: "Sophos"
+    products: ["Central", "Firewall", "Endpoint & Server", "Email"]
+    fr: "Administration des comptes, exploitation intermédiaire à avancée."
+    en: "Account administration, intermediate to advanced operation."
+  - name: "BeyondTrust"
+    products: ["PAM", "Vault"]
+    fr: "Super-administration : Group et Session Policies, Jump Groups / Items / Policies, coffre de comptes à privilèges, accès prestataires, audit des sessions."
+    en: "Super-administration: Group and Session Policies, Jump Groups / Items / Policies, privileged account vault, third-party access, session auditing."
+  - name: "Sekoia"
+    products: ["SOC"]
+    fr: "Exploitation et analyse des incidents SOC en astreinte."
+    en: "Operating and analysing SOC incidents during on-call duty."
+  - name: "EasyVista-Observe"
+    products: ["Observe"]
+    fr: "Administration de la plateforme, box de supervision, sondes, notifications dynamiques (mail → Power Automate → Teams)."
+    en: "Platform administration, monitoring boxes, probes, dynamic notifications (email → Power Automate → Teams)."
+  - name: "Cisco"
+    products: ["IOS"]
+    fr: "Configuration et exploitation de commutateurs et routeurs."
+    en: "Configuring and operating switches and routers."
+
+soft:
+  fr: ["Apprentissage continu", "Sens critique & résolution de problèmes", "Gestion de crise (astreinte, incidents)", "Travail en équipe & transmission", "Initiative & organisation", "Adaptabilité", "Sens des responsabilités"]
+  en: ["Continuous learning", "Critical thinking & problem solving", "Crisis management (on-call, incidents)", "Teamwork & knowledge sharing", "Initiative & organisation", "Adaptability", "Sense of responsibility"]

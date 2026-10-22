@@ -1,0 +1,22 @@
+---
+layout: default
+lang: fr
+alt_url: /en/
+permalink: /404.html
+title: "404"
+sitemap: false
+---
+{% assign fr = site.data.i18n.fr %}
+{% assign en = site.data.i18n.en %}
+<section class="wrap notfound">
+  <div>
+    <p class="code">404</p>
+    <h1>{{ fr.notfound.title }}</h1>
+    <p class="lead">{{ fr.notfound.lead }}</p>
+    <p class="muted small" lang="en">{{ en.notfound.lead }}</p>
+    <div class="cta-row center-row">
+      <a class="btn btn-primary" href="{{ '/' | relative_url }}">{{ fr.notfound.cta }}</a>
+      <a class="btn" href="{{ '/en/' | relative_url }}" lang="en">{{ en.notfound.cta }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% assign t = site.data.i18n[page.lang] %}
+<html lang="{{ t.code }}" class="no-js" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
+  <link rel="alternate" hreflang="{{ t.code }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ t.alt_code }}" href="{{ page.alt_url | absolute_url }}">
+  {% seo %}
+  <link rel="preload" href="{{ '/assets/fonts/geist-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/instrument-serif-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script>
+    // Applique le thème enregistré avant le premier rendu (évite le flash).
+    (function () {
+      document.documentElement.classList.replace('no-js', 'js');
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark'
+                         : !window.matchMedia('(prefers-color-scheme: light)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ t.skip }}</a>
+
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="{{ t.routes.home | relative_url }}">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">{{ site.owner.name }}</span>
+      </a>
+
+      <nav class="nav" aria-label="{{ t.nav.label }}">
+        <a href="{{ t.routes.experience | relative_url }}"{% if page.nav == 'experience' %} aria-current="page"{% endif %}>{{ t.nav.experience }}</a>
+        <a href="{{ t.routes.skills | relative_url }}"{% if page.nav == 'skills' %} aria-current="page"{% endif %}>{{ t.nav.skills }}</a>
+        <a href="{{ t.routes.projects | relative_url }}"{% if page.nav == 'projects' %} aria-current="page"{% endif %}>{{ t.nav.projects }}</a>
+        <a href="{% if page.layout == 'default' %}{{ t.routes.home | relative_url }}{% endif %}#contact">{{ t.nav.contact }}</a>
+      </nav>
+
+      <div class="head-actions">
+        <a class="lang" href="{{ page.alt_url | relative_url }}" title="{{ t.alt_title }}"
+           hreflang="{{ t.alt_code }}" lang="{{ t.alt_code }}">{{ t.alt_code | upcase }}</a>
+        <button class="icon-btn" type="button" id="theme-toggle"
+                aria-label="{{ t.theme_toggle }}" title="{{ t.theme_toggle }}">
+          {% include icon.html name="sun" %}{% include icon.html name="moon" %}
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-inner">
+      <p>© {{ 'now' | date: "%Y" }} {{ site.owner.name }} · {{ t.footer.built }}</p>
+      <a href="https://github.com/{{ site.owner.github }}">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>

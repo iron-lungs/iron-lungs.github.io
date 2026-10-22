@@ -1,0 +1,81 @@
+# ─────────────────────────────────────────────────────────────
+#  Projets affichés sur la page d'accueil (FR et EN).
+#  Ajouter un projet = ajouter un bloc ici. Rien d'autre à toucher.
+#
+#  private: true  → affiche « Dépôt privé » au lieu d'un lien
+#  repo / demo    → liens affichés uniquement s'ils sont renseignés
+#  cover          → image optionnelle dans assets/img/ (ex. "cognita.png")
+# ─────────────────────────────────────────────────────────────
+
+- slug: "cognita"
+  year: "2026"
+  private: true
+  repo: ""
+  demo: ""
+  cover: ""
+  stack: ["Tauri", "Rust", "React", "TypeScript", "Python", "Tailwind CSS"]
+  fr:
+    title: "Cognita"
+    tagline: "Base de connaissances locale, 100 % privée"
+    status: "En développement actif"
+    body: >
+      Cognita transforme des documents hétérogènes — cours, PDF techniques, photos de
+      notes manuscrites, fiches administratives — en une base de connaissances
+      structurée et interrogeable par IA. Tout le traitement se fait sur la machine de
+      l'utilisateur : aucune donnée ne part vers un serveur, aucun abonnement.
+    highlights:
+      - "Import universel : PDF natifs ou scannés, images, notes manuscrites, DOCX, Markdown"
+      - "OCR multilingue (Surya + Tesseract) et recherche sémantique par embeddings"
+      - "Assistant IA répondant avec des citations cliquables vers les sources"
+      - "Application Tauri avec sidecar Python, installateurs macOS, Windows et Linux"
+      - "Profils Essentiel / Expert et modules IA activables à la demande"
+  en:
+    title: "Cognita"
+    tagline: "A fully private, local knowledge base"
+    status: "In active development"
+    body: >
+      Cognita turns heterogeneous documents — lecture notes, technical PDFs, photos of
+      handwritten pages, administrative paperwork — into a structured knowledge base you
+      can query with AI. All processing happens on the user's machine: no data leaves the
+      device, no subscription required.
+    highlights:
+      - "Universal import: native or scanned PDFs, images, handwritten notes, DOCX, Markdown"
+      - "Multilingual OCR (Surya + Tesseract) and semantic search over embeddings"
+      - "AI assistant answering with clickable citations back to the sources"
+      - "Tauri application with a Python sidecar; macOS, Windows and Linux installers"
+      - "Essential / Expert profiles with AI modules enabled on demand"
+
+- slug: "phys-2d-perfectgaz"
+  year: "2026"
+  private: true
+  repo: ""
+  demo: ""
+  cover: ""
+  stack: ["MATLAB", "Physique statistique"]
+  fr:
+    title: "Gaz parfait 2D"
+    tagline: "Simulation d'un gaz parfait en deux dimensions"
+    status: "Projet terminé"
+    body: >
+      Simulation MATLAB d'atomes sans interaction dont les vitesses suivent la
+      distribution de Maxwell-Boltzmann : trajectoires rectilignes dans une boîte
+      L × K et réflexions spéculaires sur les parois. Cas d'étude : 300 atomes
+      d'hélium à 50 mK.
+    highlights:
+      - "Tirage des vitesses selon la distribution de Maxwell-Boltzmann"
+      - "Réflexions spéculaires sur les parois, jusqu'à CMAX collisions"
+      - "Visualisation de la distribution des vitesses et du mouvement des atomes"
+      - "Paramétrage interactif : nombre d'atomes, collisions, dimensions de la boîte"
+  en:
+    title: "2D Perfect Gas"
+    tagline: "Simulating a perfect gas in two dimensions"
+    status: "Completed"
+    body: >
+      A MATLAB simulation of non-interacting atoms whose velocities follow the
+      Maxwell-Boltzmann distribution: straight-line motion inside an L × K box with
+      specular reflection off the walls. Case study: 300 helium atoms at 50 mK.
+    highlights:
+      - "Velocities sampled from the Maxwell-Boltzmann distribution"
+      - "Specular wall reflections, up to CMAX collisions"
+      - "Plots of the velocity distribution and of the atoms' motion"
+      - "Interactive parameters: atom count, collision budget, box dimensions"

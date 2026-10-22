@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign count = site.data.projects.size | append: ' ' | append: t.projects.count %}
+{% include page-head.html title=t.projects.title lead=t.projects.lead meta=count %}
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="projects">
+      {% for project in site.data.projects %}
+        {% include project-card.html project=project index=forloop.index %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include contact.html %}

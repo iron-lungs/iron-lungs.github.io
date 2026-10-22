@@ -1,0 +1,48 @@
+{% comment %} Carte projet complète. Paramètres : include.project (entrée de _data/projects.yml), include.index (rang, pour la teinte du visuel). {% endcomment %}
+{% assign project = include.project %}
+{% assign p = project[page.lang] %}
+{% assign hue = include.index | times: 180 | plus: 200 | modulo: 360 %}
+<article class="card project reveal" id="{{ project.slug }}">
+  <div class="project-art" style="--h: {{ hue }}">
+    {% if project.cover != "" %}
+    <img class="project-cover" src="{{ project.cover | prepend: '/assets/img/' | relative_url }}"
+         alt="{{ p.title }}" loading="lazy" decoding="async">
+    {% else %}
+    <span class="project-mark" aria-hidden="true">{{ p.title }}</span>
+    {% endif %}
+    <span class="project-index">{{ include.index | prepend: '0' }}</span>
+  </div>
+
+  <div class="project-body">
+    <div class="project-top">
+      {% if p.status %}<p class="badge">{{ p.status }}</p>{% endif %}
+      <span class="meta">{{ project.year }}</span>
+    </div>
+    <h3>{{ p.title }}</h3>
+    <p class="tagline">{{ p.tagline }}</p>
+    <p class="muted">{{ p.body }}</p>
+
+    {% if p.highlights %}
+    <h4 class="micro">{{ t.projects.highlights }}</h4>
+    <ul class="ticks">
+      {% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    <h4 class="micro">{{ t.projects.stack }}</h4>
+    <ul class="chips">
+      {% for s in project.stack %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+
+    <div class="project-links">
+      {% if project.repo != "" %}
+        <a class="link" href="{{ project.repo }}">{% include icon.html name="github" %}{{ t.projects.source }}</a>
+      {% elsif project.private %}
+        <span class="link link-muted">{% include icon.html name="lock" %}{{ t.projects.private }}</span>
+      {% endif %}
+      {% if project.demo != "" %}
+        <a class="link" href="{{ project.demo }}">{% include icon.html name="arrow" %}{{ t.projects.demo }}</a>
+      {% endif %}
+    </div>
+  </div>
+</article>

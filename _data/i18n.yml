@@ -1,0 +1,214 @@
+# ─────────────────────────────────────────────────────────────
+#  Textes de l'interface, en français et en anglais.
+#  Le contenu du parcours est dans _data/cv.yml, les compétences
+#  dans _data/skills.yml et les projets dans _data/projects.yml.
+#  <em>…</em> dans un titre = mots mis en valeur (italique, accent).
+# ─────────────────────────────────────────────────────────────
+
+fr:
+  code: "fr"
+  locale: "fr_FR"
+  label: "Français"
+  alt_code: "en"
+  alt_label: "English"
+  alt_title: "Switch to English"
+  skip: "Aller au contenu"
+  theme_toggle: "Changer de thème"
+  breadcrumb: "Fil d'Ariane"
+
+  # Adresse de chaque page dans cette langue (utilisé par la navigation)
+  routes:
+    home: "/"
+    experience: "/parcours/"
+    skills: "/competences/"
+    projects: "/projets/"
+
+  nav:
+    label: "Navigation principale"
+    home: "Accueil"
+    experience: "Parcours"
+    skills: "Compétences"
+    projects: "Projets"
+    contact: "Contact"
+
+  hero:
+    kicker: "Réseaux · Sécurité · Cloud · SOC"
+    title: "Quentin, ingénieur <em>cybersécurité</em> & réseaux."
+    lead: >
+      Conception, évolution et sécurisation d'architectures réseau, sécurité et cloud ;
+      administration de plateformes clients et mutualisées, astreinte SOC comprise.
+      De technicien support à ingénieur en moins de quatre ans, après une formation
+      initiale en physique.
+    cta_primary: "Voir le parcours"
+    cta_secondary: "Compétences"
+    facts:
+      - value: "4 ans"
+        label: "en ESN / MSSP cybersécurité"
+      - value: "N3"
+        label: "dernier niveau d'escalade sur incidents"
+      - value: "FCP"
+        label: "Fortinet Certified Professional"
+    sim_title: "gaz-parfait-2d"
+    sim_live: "simulation en direct"
+    sim_atoms: "atomes"
+    sim_hits: "chocs sur les parois"
+    sim_hist: "distribution des vitesses"
+
+  home:
+    explore_kicker: "En bref"
+    explore_title: "Parcours, compétences, projets."
+    explore_lead: "L'essentiel, en trois pages."
+    experience_body: "Quatre postes en ESN / MSSP cybersécurité, une formation réseau Cisco et une licence de physique."
+    skills_body: "Réseau, sécurité périmétrique, endpoint, SOC, automatisation, et les solutions éditeurs administrées au quotidien."
+    projects_body: "Projets personnels menés en parallèle : logiciel local et simulation numérique."
+    current: "Aujourd'hui"
+
+  experience:
+    title: "Parcours"
+    lead: >
+      Issu d'une licence de physique, réorienté vers les systèmes, les réseaux et la
+      cybersécurité. J'interviens sur la conception, l'évolution et la sécurisation
+      d'architectures réseau, sécurité et cloud, et sur l'administration des solutions
+      clients et de plateformes mutualisées, astreintes SOC comprises.
+    roles_title: "Expériences"
+    education_title: "Formation"
+    certs_title: "Certifications"
+    languages_title: "Langues"
+    current: "Aujourd'hui"
+
+  skills:
+    title: "Compétences"
+    lead: "Domaines techniques, solutions éditeurs et compétences transversales, tels que pratiqués en environnement ESN / MSSP."
+    domains_title: "Domaines techniques"
+    vendors_title: "Solutions éditeurs"
+    soft_title: "Compétences transversales"
+
+  projects:
+    title: "Projets"
+    lead: "Projets personnels, menés en parallèle de l'activité professionnelle."
+    highlights: "Points clés"
+    stack: "Stack"
+    private: "Dépôt privé"
+    source: "Code source"
+    demo: "Démo"
+    count: "projets"
+
+  contact:
+    title: "Me <em>contacter</em>."
+    lead: "Pour tout échange professionnel."
+    email: "Envoyer un e-mail"
+    github: "GitHub"
+    linkedin: "LinkedIn"
+    fallback: "Le plus simple pour me joindre reste GitHub."
+
+  footer:
+    built: "Site statique en Jekyll, hébergé sur GitHub Pages."
+
+  notfound:
+    title: "Page introuvable"
+    lead: "Cette adresse ne mène à rien. La page d'accueil, elle, existe toujours."
+    cta: "Retour à l'accueil"
+
+en:
+  code: "en"
+  locale: "en_GB"
+  label: "English"
+  alt_code: "fr"
+  alt_label: "Français"
+  alt_title: "Passer en français"
+  skip: "Skip to content"
+  theme_toggle: "Toggle theme"
+  breadcrumb: "Breadcrumb"
+
+  # URL of each page in this language (used by the navigation)
+  routes:
+    home: "/en/"
+    experience: "/en/experience/"
+    skills: "/en/skills/"
+    projects: "/en/projects/"
+
+  nav:
+    label: "Main navigation"
+    home: "Home"
+    experience: "Experience"
+    skills: "Skills"
+    projects: "Projects"
+    contact: "Contact"
+
+  hero:
+    kicker: "Network · Security · Cloud · SOC"
+    title: "Quentin, <em>cybersecurity</em> & network engineer."
+    lead: >
+      Designing, evolving and securing network, security and cloud architectures;
+      administering client and shared platforms, SOC on-call duty included.
+      From support technician to engineer in under four years, after an initial
+      background in physics.
+    cta_primary: "View experience"
+    cta_secondary: "Skills"
+    facts:
+      - value: "4 yrs"
+        label: "at a cybersecurity MSP / MSSP"
+      - value: "L3"
+        label: "last escalation level for incidents"
+      - value: "FCP"
+        label: "Fortinet Certified Professional"
+    sim_title: "perfect-gas-2d"
+    sim_live: "live simulation"
+    sim_atoms: "atoms"
+    sim_hits: "wall collisions"
+    sim_hist: "speed distribution"
+
+  home:
+    explore_kicker: "At a glance"
+    explore_title: "Experience, skills, projects."
+    explore_lead: "The essentials, in three pages."
+    experience_body: "Four roles at a cybersecurity MSP / MSSP, Cisco network training and a physics degree."
+    skills_body: "Networking, perimeter security, endpoint, SOC, automation, and the vendor solutions administered day to day."
+    projects_body: "Personal side projects: local software and numerical simulation."
+    current: "Current"
+
+  experience:
+    title: "Experience"
+    lead: >
+      With a background in physics, I moved into systems, networking and
+      cybersecurity. I design, evolve and secure network, security and cloud
+      architectures, and administer client solutions and shared platforms,
+      SOC on-call duty included.
+    roles_title: "Roles"
+    education_title: "Education"
+    certs_title: "Certifications"
+    languages_title: "Languages"
+    current: "Present"
+
+  skills:
+    title: "Skills"
+    lead: "Technical domains, vendor solutions and soft skills, as practised at an MSP / MSSP."
+    domains_title: "Technical domains"
+    vendors_title: "Vendor solutions"
+    soft_title: "Soft skills"
+
+  projects:
+    title: "Projects"
+    lead: "Personal projects, carried out alongside my professional work."
+    highlights: "Highlights"
+    stack: "Stack"
+    private: "Private repository"
+    source: "Source code"
+    demo: "Live demo"
+    count: "projects"
+
+  contact:
+    title: "Get in <em>touch</em>."
+    lead: "For any professional enquiry."
+    email: "Send an email"
+    github: "GitHub"
+    linkedin: "LinkedIn"
+    fallback: "The easiest way to reach me is through GitHub."
+
+  footer:
+    built: "Static site built with Jekyll, hosted on GitHub Pages."
+
+  notfound:
+    title: "Page not found"
+    lead: "This address leads nowhere. The home page, however, still exists."
+    cta: "Back to home"
