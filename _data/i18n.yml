@@ -33,7 +33,7 @@ fr:
 
   hero:
     kicker: "Réseaux · Sécurité · Cloud · SOC"
-    title: "Ingénieur <em>Cybersécurité</em> & <em>Réseaux</em>."
+    title: "Ingénieur <em>Cybersécurité</em> & <em>Réseaux</em>"
     lead: >
       Conception, évolution et sécurisation d'architectures réseau, sécurité et cloud ;
       administration de plateformes clients et mutualisées, astreinte SOC comprise.
@@ -137,7 +137,7 @@ en:
 
   hero:
     kicker: "Network · Security · Cloud · SOC"
-    title: "Quentin, <em>Cybersecurity</em> & <em>Network</em> Engineer"
+    title: "<em>Cybersecurity</em> & <em>Network</em> Engineer"
     lead: >
       Designing, evolving and securing network, security and cloud architectures;
       administering client and shared platforms, SOC on-call duty included.
