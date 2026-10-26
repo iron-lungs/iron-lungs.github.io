@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────────────────────
 #  Site — https://pages.ironlungs.eu
 # ─────────────────────────────────────────────────────────────
-title: "Iron-lungs · Cybersécurité & Réseaux"
+title: "Iron-lungs"   # suffixe des titres : « Page | Iron-lungs »
 description: "Ingénieur Cybersécurité & Réseaux : projets, certifications éditeurs, compétences et parcours."
 url: "https://pages.ironlungs.eu"
 baseurl: ""

@@ -1,9 +1,8 @@
-{% comment %} Carte projet complète. Paramètres : include.project (entrée de _data/projects.yml), include.index (rang, pour la teinte du visuel). {% endcomment %}
+{% comment %} Carte projet complète. Paramètres : include.project (entrée de _data/projects.yml), include.index (rang affiché ; la teinte du visuel alterne en CSS). {% endcomment %}
 {% assign project = include.project %}
 {% assign p = project[page.lang] %}
-{% assign hue = include.index | times: 180 | plus: 200 | modulo: 360 %}
 <article class="card project reveal" id="{{ project.slug }}">
-  <div class="project-art" style="--h: {{ hue }}">
+  <div class="project-art">
     {% if project.cover != "" %}
     <img class="project-cover" src="{{ project.cover | prepend: '/assets/img/' | relative_url }}"
          alt="{{ p.title }}" loading="lazy" decoding="async">

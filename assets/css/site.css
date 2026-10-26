@@ -298,6 +298,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (min-width: 900px) { .project { grid-template-columns: .85fr 1.15fr; } }
 .project:hover { transform: translateY(-2px); }
 
+/* Teinte du visuel, alternée d'une carte à l'autre (pas d'attribut style : CSP) */
+.project-art { --h: 20; }
+.project:nth-child(even) .project-art { --h: 200; }
 .project-art {
   position: relative; min-height: 15rem; overflow: hidden;
   display: grid; place-items: center; padding: 2rem;
