@@ -1,0 +1,80 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign cv = site.data.cv %}
+{% include page-head.html title=t.experience.title lead=t.experience.lead %}
+
+<!-- ── Expériences ───────────────────────────────────────── -->
+<section class="section section-tight">
+  <div class="wrap">
+    <h2 class="block-title reveal">{{ t.experience.roles_title }}</h2>
+    <ol class="timeline">
+      {% for role in cv.experience %}
+      {% assign r = role[page.lang] %}
+      <li class="tl-item reveal{% if role.end == '' %} is-current{% endif %}">
+        <div class="tl-when">
+          <span class="meta">{{ role.start }} — {% if role.end == '' %}<b>{{ t.experience.current }}</b>{% else %}{{ role.end }}{% endif %}</span>
+        </div>
+        <div class="tl-body">
+          <h3>{{ r.title }}</h3>
+          <p class="tl-org">{{ role.company }}</p>
+          <ul class="ticks">
+            {% for pt in r.points %}<li>{{ pt }}</li>{% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<!-- ── Formation · Certifications · Langues ──────────────── -->
+<section class="section section-alt">
+  <div class="wrap cv-grid">
+    <div class="reveal">
+      <h2 class="block-title">{{ t.experience.education_title }}</h2>
+      <ul class="cv-list">
+        {% for e in cv.education %}
+        <li>
+          <span class="cv-icon">{% include icon.html name="school" %}</span>
+          <div>
+            <h3>{{ e[page.lang].title }}</h3>
+            <p class="meta">{% if e.school != '' %}{{ e.school }} · {% endif %}{{ e.period }}</p>
+            {% if e.code %}<p class="badge badge-code">{{ e.code }}</p>{% endif %}
+            <p class="muted">{{ e[page.lang].body }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <h2 class="block-title">{{ t.experience.certs_title }}</h2>
+      <ul class="cv-list">
+        {% for v in site.data.editeurs %}{% for c in v.certs %}
+        <li>
+          <span class="cv-icon">{% include icon.html name="award" %}</span>
+          <div>
+            <h3>{{ c.name }}</h3>
+            <p class="meta">{{ v.name }} · {{ c.date }}</p>
+            {% if c.parts.size > 0 %}
+            <ul class="chips">{% for part in c.parts %}<li>{{ part }}</li>{% endfor %}</ul>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}{% endfor %}
+      </ul>
+      <p class="certs-more"><a class="link" href="{{ t.routes.vendors | relative_url }}">{{ t.experience.certs_more }}{% include icon.html name="arrow" %}</a></p>
+
+      <h2 class="block-title block-gap">{{ t.experience.languages_title }}</h2>
+      <dl class="langs">
+        {% for l in cv.languages[page.lang] %}
+        <div><dt>{{ l.name }}</dt><dd>{{ l.level }}</dd></div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>
+
+{% include contact.html %}

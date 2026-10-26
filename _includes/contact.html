@@ -1,0 +1,24 @@
+{% comment %} Section contact. Paramètres optionnels : include.title, include.lead (sinon textes par défaut), include.num (numéro de section). {% endcomment %}
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="contact-panel reveal">
+      <p class="kicker">{% if include.num %}<span class="num">{{ include.num }}</span>{% endif %}{{ t.nav.contact }}</p>
+      <h2>{{ include.title | default: t.contact.title }}</h2>
+      <p class="lead">{{ include.lead | default: t.contact.lead }}</p>
+
+      <div class="cta-row center-row">
+        {% if site.owner.email != "" %}
+          <a class="btn btn-primary" href="mailto:{{ site.owner.email }}">{% include icon.html name="mail" %}{{ t.contact.email }}</a>
+        {% endif %}
+        <a class="btn {% if site.owner.email == "" %}btn-primary{% endif %}" href="https://github.com/{{ site.owner.github }}">{% include icon.html name="github" %}{{ t.contact.github }}</a>
+        {% if site.owner.linkedin != "" %}
+          <a class="btn" href="{{ site.owner.linkedin }}">{% include icon.html name="linkedin" %}{{ t.contact.linkedin }}</a>
+        {% endif %}
+      </div>
+
+      {% if site.owner.email == "" %}
+      <p class="muted small">{{ t.contact.fallback }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

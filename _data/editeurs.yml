@@ -1,0 +1,154 @@
+# ─────────────────────────────────────────────────────────────
+#  Éditeurs (page /editeurs/), en français et en anglais.
+#  (fichier nommé « editeurs » : Jekyll ignore tout ce qui commence
+#  par « vendor », exclu dans _config.yml)
+#  L'ordre ici = l'ordre des onglets ; Fortinet en premier.
+#
+#  slug      → ancre de la sous-section (/editeurs/#fortinet)
+#  certs     → certifications de l'éditeur (vide = pratique terrain)
+#  products  → produits administrés en production
+#  fr / en   → domaine, synthèse et réalisations
+#  Les projets liés sont ceux de _data/projects.yml dont la liste
+#  « vendors » contient le slug de l'éditeur.
+# ─────────────────────────────────────────────────────────────
+
+- slug: "fortinet"
+  name: "Fortinet"
+  certs:
+    - name: "Fortinet Certified Professional (FCP)"
+      track: "Network Security"
+      date: "2026"
+      parts: ["NSE 4 – FortiGate Administrator 7.4", "NSE 5 – FortiManager Administrator 7.6"]
+  products: ["FortiGate 7.0 → 7.6", "FortiManager", "FortiAnalyzer", "FortiClient EMS", "FortiSwitch", "FortiAP"]
+  fr:
+    domain: "Sécurité réseau · Security Fabric"
+    summary: "Éditeur principal au quotidien : administration avancée et troubleshooting de parcs FortiGate clients, du pare-feu au poste de travail, avec une gestion centralisée par FortiManager et FortiAnalyzer."
+    points:
+      - "Administration avancée et troubleshooting FortiGate 7.0 → 7.6 : politiques, routage, VPN, profils de sécurité"
+      - "Intégration Security Fabric : FortiGate, FortiSwitch, FortiAP, FortiClient EMS, FortiAnalyzer"
+      - "Gestion centralisée FortiManager : bases multi-ADOM et industrialisation des configurations"
+      - "Migration des accès distants VPN SSL → IPSec et déploiement ZTNA"
+      - "Scripts Python de supervision via FortiAPI"
+  en:
+    domain: "Network security · Security Fabric"
+    summary: "My main vendor day to day: advanced administration and troubleshooting of client FortiGate estates, from the firewall to the endpoint, centrally managed with FortiManager and FortiAnalyzer."
+    points:
+      - "Advanced FortiGate 7.0 → 7.6 administration and troubleshooting: policies, routing, VPN, security profiles"
+      - "Security Fabric integration: FortiGate, FortiSwitch, FortiAP, FortiClient EMS, FortiAnalyzer"
+      - "Central management with FortiManager: multi-ADOM databases and configuration industrialisation"
+      - "Remote-access migration from SSL VPN to IPsec and ZTNA rollout"
+      - "Python monitoring scripts through FortiAPI"
+
+- slug: "cisco"
+  name: "Cisco"
+  certs:
+    - name: "Cisco CyberOps Associate"
+      track: "Cisco Networking Academy"
+      date: "2022"
+      parts: []
+  products: ["IOS", "Commutation", "Routage"]
+  fr:
+    domain: "Réseau · SOC"
+    summary: "Socle réseau acquis pendant la formation d'architecte réseaux et cybersécurité (parcours CCNA), complété par la certification CyberOps Associate orientée analyse SOC."
+    points:
+      - "Configuration et exploitation de commutateurs et routeurs sous Cisco IOS"
+      - "VLAN, trunk, routage inter-VLAN, OSPF, EtherChannel, ACL, NAT / PAT, DHCP"
+      - "Fondamentaux SOC : analyse d'alertes, d'événements et de captures réseau"
+  en:
+    domain: "Networking · SOC"
+    summary: "Networking foundation built during the network & cybersecurity architect programme (CCNA track), completed by the SOC-oriented CyberOps Associate certification."
+    points:
+      - "Configuring and operating Cisco IOS switches and routers"
+      - "VLAN, trunking, inter-VLAN routing, OSPF, EtherChannel, ACL, NAT / PAT, DHCP"
+      - "SOC fundamentals: analysing alerts, events and network captures"
+
+- slug: "trend-micro"
+  name: "Trend Micro"
+  certs: []
+  products: ["Vision One", "Deep Security", "Worry-Free", "Email Security", "Cloud App Security"]
+  fr:
+    domain: "Endpoint · XDR · Messagerie"
+    summary: "Administration avancée, déploiement et maintien en condition opérationnelle de la protection des postes, des serveurs et de la messagerie."
+    points:
+      - "Réponse aux événements de sécurité via XDR (Vision One)"
+      - "Protection des serveurs (Deep Security) et des postes (Worry-Free)"
+      - "Sécurité de la messagerie et des applications cloud (Email Security, Cloud App Security)"
+  en:
+    domain: "Endpoint · XDR · Email"
+    summary: "Advanced administration, deployment and ongoing maintenance of endpoint, server and email protection."
+    points:
+      - "Security event response through XDR (Vision One)"
+      - "Server (Deep Security) and endpoint (Worry-Free) protection"
+      - "Email and cloud application security (Email Security, Cloud App Security)"
+
+- slug: "sophos"
+  name: "Sophos"
+  certs: []
+  products: ["Central", "Firewall", "Endpoint & Server", "Email"]
+  fr:
+    domain: "Pare-feu · Endpoint"
+    summary: "Administration des comptes Sophos Central et exploitation intermédiaire à avancée des pare-feu, postes, serveurs et messagerie."
+    points:
+      - "Administration des comptes clients dans Sophos Central"
+      - "Exploitation Sophos Firewall et protection Endpoint & Server"
+  en:
+    domain: "Firewall · Endpoint"
+    summary: "Sophos Central account administration and intermediate to advanced operation of firewalls, endpoints, servers and email."
+    points:
+      - "Client account administration in Sophos Central"
+      - "Operating Sophos Firewall and Endpoint & Server protection"
+
+- slug: "beyondtrust"
+  name: "BeyondTrust"
+  certs: []
+  products: ["PAM", "Vault"]
+  fr:
+    domain: "PAM · Accès à privilèges"
+    summary: "Super-administration de la plateforme d'accès à privilèges : qui accède à quoi, comment, et avec quelle traçabilité."
+    points:
+      - "Group et Session Policies, Jump Groups / Items / Policies"
+      - "Coffre de comptes à privilèges"
+      - "Accès prestataires encadrés et audit des sessions"
+  en:
+    domain: "PAM · Privileged access"
+    summary: "Super-administration of the privileged access platform: who reaches what, how, and with which audit trail."
+    points:
+      - "Group and Session Policies, Jump Groups / Items / Policies"
+      - "Privileged account vault"
+      - "Controlled third-party access and session auditing"
+
+- slug: "sekoia"
+  name: "Sekoia"
+  certs: []
+  products: ["Sekoia.io SOC Platform"]
+  fr:
+    domain: "SOC · SIEM"
+    summary: "Exploitation de la plateforme SOC et analyse des incidents lors des astreintes."
+    points:
+      - "Qualification et analyse des alertes en astreinte SOC"
+      - "Escalade et traitement des incidents de sécurité jusqu'au N3"
+  en:
+    domain: "SOC · SIEM"
+    summary: "Operating the SOC platform and analysing incidents during on-call duty."
+    points:
+      - "Triaging and analysing alerts during SOC on-call duty"
+      - "Escalating and handling security incidents up to L3"
+
+- slug: "easyvista"
+  name: "EasyVista"
+  certs: []
+  products: ["Observe", "Box de supervision", "Sondes"]
+  fr:
+    domain: "Supervision"
+    summary: "Administration de la plateforme de supervision EasyVista-Observe, de la migration depuis PRTG jusqu'aux notifications dynamiques."
+    points:
+      - "Migration de la supervision PRTG → Observe sans interruption de service"
+      - "Déploiement de box de supervision et de sondes chez les clients"
+      - "Notifications dynamiques : mail → Power Automate → Teams"
+  en:
+    domain: "Monitoring"
+    summary: "Administration of the EasyVista-Observe monitoring platform, from the PRTG migration to dynamic notifications."
+    points:
+      - "PRTG → Observe monitoring migration with no service interruption"
+      - "Deployment of monitoring boxes and probes at client sites"
+      - "Dynamic notifications: email → Power Automate → Teams"

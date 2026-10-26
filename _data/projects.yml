@@ -1,0 +1,221 @@
+# ─────────────────────────────────────────────────────────────
+#  Projets (page /projets/ et accueil), en français et en anglais.
+#  Ajouter un projet = ajouter un bloc ici. Rien d'autre à toucher.
+#
+#  kind: "pro"    → mission menée en ESN (anonymisée, parcs clients)
+#  kind: "perso"  → projet personnel (grande carte)
+#  vendors        → slugs de _data/editeurs.yml : le projet apparaît
+#                   aussi dans la sous-section de chaque éditeur
+#  private: true  → affiche « Dépôt privé » au lieu d'un lien
+#  repo / demo    → liens affichés uniquement s'ils sont renseignés
+#  cover          → image optionnelle dans assets/img/ (ex. "cognita.png")
+# ─────────────────────────────────────────────────────────────
+
+# ── Missions en ESN ──────────────────────────────────────────
+
+- slug: "vpn-ssl-ipsec"
+  kind: "pro"
+  year: ""   # à compléter
+  vendors: ["fortinet"]
+  stack: ["FortiGate", "FortiClient EMS", "IPSec", "VPN SSL"]
+  fr:
+    title: "Migration VPN SSL → IPSec"
+    tagline: "Bascule des accès distants de parcs FortiGate clients"
+    body: "Remplacement des accès nomades en VPN SSL par des tunnels IPSec sur les FortiGate clients, avec un déploiement des profils côté postes via FortiClient EMS."
+    highlights:
+      - "Conception des tunnels IPSec et des politiques associées"
+      - "Distribution des profils VPN aux postes depuis FortiClient EMS"
+      - "Bascule progressive et retrait du VPN SSL"
+  en:
+    title: "SSL VPN → IPsec migration"
+    tagline: "Moving remote access off SSL VPN across client FortiGate estates"
+    body: "Replacing SSL VPN remote access with IPsec tunnels on client FortiGates, with VPN profiles pushed to endpoints through FortiClient EMS."
+    highlights:
+      - "Designing the IPsec tunnels and related policies"
+      - "Pushing VPN profiles to endpoints from FortiClient EMS"
+      - "Gradual cut-over and SSL VPN decommissioning"
+
+- slug: "ztna"
+  kind: "pro"
+  year: ""   # à compléter
+  vendors: ["fortinet"]
+  stack: ["FortiGate", "FortiClient EMS", "ZTNA", "Security Fabric"]
+  fr:
+    title: "Déploiement ZTNA"
+    tagline: "Accès applicatif fondé sur l'identité et la posture du poste"
+    body: "Mise en place d'un accès Zero Trust aux applications : le FortiGate autorise chaque session selon l'utilisateur et l'état de conformité du poste remonté par FortiClient EMS."
+    highlights:
+      - "Tags de conformité des postes et règles d'accès ZTNA"
+      - "Intégration Security Fabric FortiGate ↔ FortiClient EMS"
+  en:
+    title: "ZTNA rollout"
+    tagline: "Application access based on identity and device posture"
+    body: "Zero Trust application access: the FortiGate allows each session based on the user and on the device compliance state reported by FortiClient EMS."
+    highlights:
+      - "Device compliance tags and ZTNA access rules"
+      - "Security Fabric integration between FortiGate and FortiClient EMS"
+
+- slug: "fortimanager-adom"
+  kind: "pro"
+  year: "2026"
+  vendors: ["fortinet"]
+  stack: ["FortiManager", "FortiAnalyzer", "ADOM", "FortiGate"]
+  fr:
+    title: "Industrialisation FortiManager"
+    tagline: "Bases multi-ADOM et configurations homogènes"
+    body: "Structuration de la gestion centralisée des FortiGate clients en bases multi-ADOM, pour fiabiliser et standardiser les configurations dans le cadre des projets qualité de service."
+    highlights:
+      - "Organisation des équipements par ADOM"
+      - "Standardisation et industrialisation des configurations"
+      - "Journalisation centralisée vers FortiAnalyzer"
+  en:
+    title: "FortiManager industrialisation"
+    tagline: "Multi-ADOM databases and consistent configurations"
+    body: "Structuring central management of client FortiGates into multi-ADOM databases, to make configurations more reliable and consistent as part of service-quality projects."
+    highlights:
+      - "Organising devices by ADOM"
+      - "Configuration standardisation and industrialisation"
+      - "Centralised logging to FortiAnalyzer"
+
+- slug: "fortiapi-python"
+  kind: "pro"
+  year: ""   # à compléter
+  vendors: ["fortinet"]
+  stack: ["Python", "FortiAPI", "API REST"]
+  fr:
+    title: "Supervision par FortiAPI"
+    tagline: "Scripts Python d'interrogation des FortiGate"
+    body: "Scripts Python interrogeant l'API REST des équipements Fortinet pour remonter des indicateurs de supervision que les sondes classiques ne couvrent pas."
+    highlights:
+      - "Appels à l'API REST FortiOS depuis Python"
+      - "Indicateurs exploités par la supervision"
+  en:
+    title: "FortiAPI monitoring"
+    tagline: "Python scripts querying FortiGates"
+    body: "Python scripts calling the Fortinet REST API to surface monitoring metrics that standard probes do not cover."
+    highlights:
+      - "FortiOS REST API calls from Python"
+      - "Metrics fed into the monitoring platform"
+
+- slug: "supervision-observe"
+  kind: "pro"
+  year: "2024 – 2025"
+  vendors: ["easyvista"]
+  stack: ["EasyVista-Observe", "PRTG", "Power Automate", "Teams"]
+  fr:
+    title: "Migration de la supervision"
+    tagline: "De PRTG à EasyVista-Observe, sans interruption de service"
+    body: "Migration de la supervision des parcs clients de PRTG vers EasyVista-Observe, puis enrichissement de la plateforme : box de supervision, sondes et notifications dynamiques."
+    highlights:
+      - "Migration sans interruption de service et accompagnement des clients"
+      - "Déploiement de box de supervision et de sondes"
+      - "Chaîne de notifications dynamiques : mail → Power Automate → Teams"
+  en:
+    title: "Monitoring migration"
+    tagline: "From PRTG to EasyVista-Observe, with no service interruption"
+    body: "Migrating client monitoring from PRTG to EasyVista-Observe, then extending the platform: monitoring boxes, probes and dynamic notifications."
+    highlights:
+      - "Migration with no service interruption, supporting clients throughout"
+      - "Deployment of monitoring boxes and probes"
+      - "Dynamic notification chain: email → Power Automate → Teams"
+
+- slug: "pam-beyondtrust"
+  kind: "pro"
+  year: ""   # à compléter
+  vendors: ["beyondtrust"]
+  stack: ["BeyondTrust PAM", "Vault", "Jump Policies"]
+  fr:
+    title: "Accès à privilèges"
+    tagline: "Encadrer et tracer les accès prestataires"
+    body: "Super-administration de la plateforme BeyondTrust : politiques de groupes et de sessions, Jump Groups et coffre de comptes à privilèges, pour des accès tiers maîtrisés et audités."
+    highlights:
+      - "Group / Session Policies et Jump Groups / Items / Policies"
+      - "Coffre de comptes à privilèges"
+      - "Audit des sessions prestataires"
+  en:
+    title: "Privileged access"
+    tagline: "Controlling and tracing third-party access"
+    body: "Super-administration of the BeyondTrust platform: group and session policies, Jump Groups and privileged account vault, for controlled and audited third-party access."
+    highlights:
+      - "Group / Session Policies and Jump Groups / Items / Policies"
+      - "Privileged account vault"
+      - "Third-party session auditing"
+
+# ── Projets personnels ───────────────────────────────────────
+
+- slug: "cognita"
+  kind: "perso"
+  vendors: []
+  year: "2026"
+  private: true
+  repo: ""
+  demo: ""
+  cover: ""
+  stack: ["Tauri", "Rust", "React", "TypeScript", "Python", "Tailwind CSS"]
+  fr:
+    title: "Cognita"
+    tagline: "Base de connaissances locale, 100 % privée"
+    status: "En développement actif"
+    body: >
+      Cognita transforme des documents hétérogènes — cours, PDF techniques, photos de
+      notes manuscrites, fiches administratives — en une base de connaissances
+      structurée et interrogeable par IA. Tout le traitement se fait sur la machine de
+      l'utilisateur : aucune donnée ne part vers un serveur, aucun abonnement.
+    highlights:
+      - "Import universel : PDF natifs ou scannés, images, notes manuscrites, DOCX, Markdown"
+      - "OCR multilingue (Surya + Tesseract) et recherche sémantique par embeddings"
+      - "Assistant IA répondant avec des citations cliquables vers les sources"
+      - "Application Tauri avec sidecar Python, installateurs macOS, Windows et Linux"
+      - "Profils Essentiel / Expert et modules IA activables à la demande"
+  en:
+    title: "Cognita"
+    tagline: "A fully private, local knowledge base"
+    status: "In active development"
+    body: >
+      Cognita turns heterogeneous documents — lecture notes, technical PDFs, photos of
+      handwritten pages, administrative paperwork — into a structured knowledge base you
+      can query with AI. All processing happens on the user's machine: no data leaves the
+      device, no subscription required.
+    highlights:
+      - "Universal import: native or scanned PDFs, images, handwritten notes, DOCX, Markdown"
+      - "Multilingual OCR (Surya + Tesseract) and semantic search over embeddings"
+      - "AI assistant answering with clickable citations back to the sources"
+      - "Tauri application with a Python sidecar; macOS, Windows and Linux installers"
+      - "Essential / Expert profiles with AI modules enabled on demand"
+
+- slug: "phys-2d-perfectgaz"
+  kind: "perso"
+  vendors: []
+  year: "2026"
+  private: true
+  repo: ""
+  demo: ""
+  cover: ""
+  stack: ["MATLAB", "Physique statistique"]
+  fr:
+    title: "Gaz parfait 2D"
+    tagline: "Simulation d'un gaz parfait en deux dimensions"
+    status: "Projet terminé"
+    body: >
+      Simulation MATLAB d'atomes sans interaction dont les vitesses suivent la
+      distribution de Maxwell-Boltzmann : trajectoires rectilignes dans une boîte
+      L × K et réflexions spéculaires sur les parois. Cas d'étude : 300 atomes
+      d'hélium à 50 mK.
+    highlights:
+      - "Tirage des vitesses selon la distribution de Maxwell-Boltzmann"
+      - "Réflexions spéculaires sur les parois, jusqu'à CMAX collisions"
+      - "Visualisation de la distribution des vitesses et du mouvement des atomes"
+      - "Paramétrage interactif : nombre d'atomes, collisions, dimensions de la boîte"
+  en:
+    title: "2D Perfect Gas"
+    tagline: "Simulating a perfect gas in two dimensions"
+    status: "Completed"
+    body: >
+      A MATLAB simulation of non-interacting atoms whose velocities follow the
+      Maxwell-Boltzmann distribution: straight-line motion inside an L × K box with
+      specular reflection off the walls. Case study: 300 helium atoms at 50 mK.
+    highlights:
+      - "Velocities sampled from the Maxwell-Boltzmann distribution"
+      - "Specular wall reflections, up to CMAX collisions"
+      - "Plots of the velocity distribution and of the atoms' motion"
+      - "Interactive parameters: atom count, collision budget, box dimensions"

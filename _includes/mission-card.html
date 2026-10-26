@@ -1,0 +1,26 @@
+{% comment %} Carte mission (projet mené en ESN). Paramètres : include.project (entrée kind "pro" de _data/projects.yml), include.index (rang). {% endcomment %}
+{% assign project = include.project %}
+{% assign p = project[page.lang] %}
+<article class="card mission reveal" id="{{ project.slug }}">
+  <div class="mission-top">
+    <span class="meta">{{ include.index | prepend: '0' }}</span>
+    <span class="mission-vendors">
+      {% for slug in project.vendors %}
+        {% assign v = site.data.editeurs | where: "slug", slug | first %}
+        {% if v %}<a class="badge" href="{{ t.routes.vendors | append: '#' | append: v.slug | relative_url }}">{{ v.name }}</a>{% endif %}
+      {% endfor %}
+    </span>
+  </div>
+  <h3>{{ p.title }}</h3>
+  <p class="tagline">{{ p.tagline }}</p>
+  <p class="muted">{{ p.body }}</p>
+  {% if p.highlights %}
+  <ul class="ticks">
+    {% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+  <div class="mission-foot">
+    <ul class="chips">{% for s in project.stack %}<li>{{ s }}</li>{% endfor %}</ul>
+    {% if project.year != "" %}<span class="meta">{{ project.year }}</span>{% endif %}
+  </div>
+</article>

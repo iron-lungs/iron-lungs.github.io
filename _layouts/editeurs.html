@@ -1,0 +1,92 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign vendors = site.data.editeurs %}
+{% assign count = vendors.size | append: ' ' | append: t.vendors.count %}
+{% include page-head.html title=t.vendors.title lead=t.vendors.lead meta=count %}
+
+<!-- ── Onglets : un par éditeur (ancres) ─────────────────── -->
+<nav class="vendor-tabs" aria-label="{{ t.vendors.tabs }}">
+  <div class="wrap">
+    <ul>
+      {% for v in vendors %}
+      <li><a href="#{{ v.slug }}" data-tab="{{ v.slug }}">{% if v.certs.size > 0 %}<span class="tab-dot" aria-hidden="true"></span>{% endif %}{{ v.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Une sous-section par éditeur ──────────────────────── -->
+{% for v in vendors %}
+{% assign vt = v[page.lang] %}
+{% assign linked = site.data.projects | where_exp: "p", "p.vendors contains v.slug" %}
+<section id="{{ v.slug }}" class="vendor-sec{% if forloop.first %} is-lead{% endif %}{% cycle '', ' section-alt' %}">
+  <div class="wrap">
+    <header class="vendor-head reveal">
+      <p class="kicker"><span class="num">{{ forloop.index | prepend: '0' }}</span>{{ vt.domain }}</p>
+      <div class="vendor-title">
+        <h2>{{ v.name }}</h2>
+        {% if v.certs.size > 0 %}
+        <p class="badge">{% include icon.html name="award" %}{{ t.vendors.certified }}</p>
+        {% else %}
+        <p class="badge badge-dim">{{ t.vendors.field }}</p>
+        {% endif %}
+      </div>
+      <p class="lead">{{ vt.summary }}</p>
+    </header>
+
+    <div class="vendor-grid">
+      <div class="vendor-side reveal">
+        {% if v.certs.size > 0 %}
+          {% for c in v.certs %}
+          <article class="cert-card">
+            <div class="cert-top">
+              <span class="cv-icon">{% include icon.html name="award" %}</span>
+              <span class="meta">{{ c.date }}</span>
+            </div>
+            <p class="micro">{{ t.vendors.certs }} · {{ c.track }}</p>
+            <h3>{{ c.name }}</h3>
+            {% if c.parts.size > 0 %}
+            <ul class="cert-parts">{% for part in c.parts %}<li>{{ part }}</li>{% endfor %}</ul>
+            {% endif %}
+          </article>
+          {% endfor %}
+        {% else %}
+          <article class="cert-card cert-field">
+            <p class="micro">{{ t.vendors.field }}</p>
+            <p class="muted">{{ t.vendors.field_body }}</p>
+          </article>
+        {% endif %}
+
+        <h3 class="micro">{{ t.vendors.products }}</h3>
+        <ul class="chips">{% for prod in v.products %}<li>{{ prod }}</li>{% endfor %}</ul>
+      </div>
+
+      <div class="vendor-main reveal">
+        <h3 class="micro">{{ t.vendors.points }}</h3>
+        <ul class="ticks">{% for pt in vt.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+
+        {% if linked.size > 0 %}
+        <h3 class="micro">{{ t.vendors.projects }}</h3>
+        <ul class="linked">
+          {% for lp in linked %}
+          <li>
+            <a href="{{ t.routes.projects | append: '#' | append: lp.slug | relative_url }}">
+              <span>
+                <b>{{ lp[page.lang].title }}</b>
+                <span class="muted">{{ lp[page.lang].tagline }}</span>
+              </span>
+              {% include icon.html name="arrow" %}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{% include contact.html %}

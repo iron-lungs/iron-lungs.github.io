@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign pro = site.data.projects | where: "kind", "pro" %}
+{% assign perso = site.data.projects | where: "kind", "perso" %}
+{% assign count = site.data.projects.size | append: ' ' | append: t.projects.count %}
+{% include page-head.html title=t.projects.title lead=t.projects.lead meta=count %}
+
+<!-- ── Missions en ESN ───────────────────────────────────── -->
+<section class="section section-tight">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <h2 class="block-title">{{ t.projects.pro_title }}</h2>
+      <p class="muted">{{ t.projects.pro_lead }}</p>
+    </header>
+    <div class="missions">
+      {% for project in pro %}
+        {% include mission-card.html project=project index=forloop.index %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── Projets personnels ────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <h2 class="block-title">{{ t.projects.perso_title }}</h2>
+      <p class="muted">{{ t.projects.perso_lead }}</p>
+    </header>
+    <div class="projects">
+      {% for project in perso %}
+        {% include project-card.html project=project index=forloop.index %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include contact.html %}

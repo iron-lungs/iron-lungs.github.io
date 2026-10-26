@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────
+#  Compétences (page /competences/), en français et en anglais.
+#  domains  → grands domaines techniques (icône + mots-clés)
+#  soft     → compétences transversales
+#  (les solutions éditeurs sont dans _data/editeurs.yml)
+# ─────────────────────────────────────────────────────────────
+
+domains:
+  - icon: "network"
+    fr:
+      title: "Réseaux & Cisco"
+      items: ["Routage", "Commutation", "VLAN / Trunk", "Routage inter-VLAN", "OSPF", "EtherChannel / Eth-Trunk", "ACL", "NAT / PAT", "DHCP", "WLAN", "NAC", "Cisco IOS"]
+    en:
+      title: "Networking & Cisco"
+      items: ["Routing", "Switching", "VLAN / Trunk", "Inter-VLAN routing", "OSPF", "EtherChannel / Eth-Trunk", "ACL", "NAT / PAT", "DHCP", "WLAN", "NAC", "Cisco IOS"]
+  - icon: "shield"
+    fr:
+      title: "Sécurité périmétrique & accès"
+      items: ["Pare-feu NGFW", "VPN SSL / IPSec", "ZTNA", "Security Fabric", "PAM & Bastion"]
+    en:
+      title: "Perimeter security & access"
+      items: ["NGFW firewalls", "SSL / IPsec VPN", "ZTNA", "Security Fabric", "PAM & Bastion"]
+  - icon: "lock"
+    fr:
+      title: "Endpoint & messagerie"
+      items: ["EDR / XDR", "Anti-spam", "SPF / DKIM / DMARC", "Protection des serveurs"]
+    en:
+      title: "Endpoint & email"
+      items: ["EDR / XDR", "Anti-spam", "SPF / DKIM / DMARC", "Server protection"]
+  - icon: "radar"
+    fr:
+      title: "SOC & supervision"
+      items: ["SIEM", "Gestion d'incidents", "Réponse en astreinte", "Supervision par sondes", "Notifications dynamiques"]
+    en:
+      title: "SOC & monitoring"
+      items: ["SIEM", "Incident management", "On-call response", "Probe-based monitoring", "Dynamic notifications"]
+  - icon: "code"
+    fr:
+      title: "Automatisation & API"
+      items: ["Python", "Analyse PCAP", "FortiAPI", "API REST", "Power Automate", "MATLAB", "Fortran"]
+    en:
+      title: "Automation & APIs"
+      items: ["Python", "PCAP analysis", "FortiAPI", "REST APIs", "Power Automate", "MATLAB", "Fortran"]
+  - icon: "flow"
+    fr:
+      title: "Méthodes"
+      items: ["MCO / MCS", "Incidents N0 → N3", "ESN / MSSP", "Audits & remédiation", "ITSM", "COMOP / COPIL", "Amélioration continue"]
+    en:
+      title: "Methods"
+      items: ["Run & security maintenance", "L0 → L3 incidents", "MSP / MSSP", "Audits & remediation", "ITSM", "Ops & steering committees", "Continuous improvement"]
+
+soft:
+  fr: ["Apprentissage continu", "Sens critique & résolution de problèmes", "Gestion de crise (astreinte, incidents)", "Travail en équipe & transmission", "Initiative & organisation", "Adaptabilité", "Sens des responsabilités"]
+  en: ["Continuous learning", "Critical thinking & problem solving", "Crisis management (on-call, incidents)", "Teamwork & knowledge sharing", "Initiative & organisation", "Adaptability", "Sense of responsibility"]

@@ -1,0 +1,17 @@
+# Build Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Documents privés (CV, DAT, DEX, documentation interne) — jamais publiés
+docs/
+
+# Préproduction locale (Docker) — outillage personnel, hors dépôt
+Dockerfile
+docker-compose.yml
+.dockerignore

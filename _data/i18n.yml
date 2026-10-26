@@ -1,0 +1,268 @@
+# ─────────────────────────────────────────────────────────────
+#  Textes de l'interface, en français et en anglais.
+#  Le contenu du parcours est dans _data/cv.yml, les compétences
+#  dans _data/skills.yml et les projets dans _data/projects.yml.
+#  <em>…</em> dans un titre = mots mis en valeur (italique, accent).
+# ─────────────────────────────────────────────────────────────
+
+fr:
+  code: "fr"
+  locale: "fr_FR"
+  label: "Français"
+  alt_code: "en"
+  alt_label: "English"
+  alt_title: "Switch to English"
+  skip: "Aller au contenu"
+  theme_toggle: "Changer de thème"
+  breadcrumb: "Fil d'Ariane"
+
+  # Adresse de chaque page dans cette langue (utilisé par la navigation)
+  routes:
+    home: "/"
+    projects: "/projets/"
+    vendors: "/editeurs/"
+    skills: "/competences/"
+    experience: "/parcours/"
+
+  nav:
+    label: "Navigation principale"
+    home: "Accueil"
+    projects: "Projets"
+    vendors: "Éditeurs"
+    skills: "Compétences"
+    experience: "Parcours"
+    contact: "Contact"
+
+  hero:
+    kicker: "Fortinet · Réseaux · Sécurité · SOC"
+    title: "Ingénieur <em>Cybersécurité</em> & <em>Réseaux</em>"
+    lead: >
+      Conception, évolution et sécurisation d'architectures réseau, sécurité et cloud
+      en ESN / MSSP. Certifié Fortinet (FCP), j'administre au quotidien les solutions
+      de sept éditeurs, du pare-feu au SOC, et je mène des projets de migration,
+      d'industrialisation et de supervision sur des parcs clients.
+    cta_primary: "Voir les projets"
+    cta_secondary: "Éditeurs & certifications"
+    facts:
+      - value: "4 ans"
+        label: "en ESN / MSSP cybersécurité"
+      - value: "N3"
+        label: "dernier niveau d'escalade sur incidents"
+      - value: "FCP"
+        label: "Fortinet Certified Professional"
+      - value: "7"
+        label: "éditeurs administrés en production"
+    sim_title: "gaz-parfait-2d"
+    sim_live: "simulation en direct"
+    sim_atoms: "atomes"
+    sim_hits: "chocs sur les parois"
+    sim_hist: "distribution des vitesses"
+
+  home:
+    explore_kicker: "En bref"
+    explore_title: "Projets, éditeurs, parcours."
+    explore_lead: "L'essentiel, en trois pages."
+    projects_body: "Missions réseau & sécurité menées en ESN sur des parcs clients, et projets personnels."
+    vendors_body: "Certifications et solutions administrées en production, éditeur par éditeur, en commençant par Fortinet."
+    experience_body: "Quatre postes en ESN / MSSP cybersécurité, un titre RNCP d'architecte réseaux et cybersécurité, une licence de physique."
+    skills_body: "Réseau, sécurité périmétrique, endpoint, SOC, automatisation."
+    certs_kicker: "Certifications"
+    certs_title: "Certifié <em>éditeur</em>."
+    certs_cta: "Tous les éditeurs"
+    current: "Aujourd'hui"
+
+  experience:
+    title: "Parcours"
+    lead: >
+      Issu d'une licence de physique, réorienté vers les systèmes, les réseaux et la
+      cybersécurité. J'interviens sur la conception, l'évolution et la sécurisation
+      d'architectures réseau, sécurité et cloud, et sur l'administration des solutions
+      clients et de plateformes mutualisées, astreintes SOC comprises.
+    roles_title: "Expériences"
+    education_title: "Formation"
+    certs_title: "Certifications"
+    certs_more: "Détail par éditeur"
+    languages_title: "Langues"
+    current: "Aujourd'hui"
+
+  skills:
+    title: "Compétences"
+    lead: "Domaines techniques et compétences transversales, tels que pratiqués en environnement ESN / MSSP. Le détail par éditeur a sa propre page."
+    domains_title: "Domaines techniques"
+    vendors_title: "Solutions éditeurs"
+    vendors_lead: "Certifications, produits administrés et réalisations, éditeur par éditeur."
+    soft_title: "Compétences transversales"
+
+  projects:
+    title: "Projets"
+    lead: "Missions réseau & sécurité menées en ESN sur des parcs clients (anonymisées), et projets personnels menés en parallèle."
+    pro_title: "Missions en ESN"
+    pro_lead: "Projets menés sur des parcs clients, sans nom de client."
+    perso_title: "Projets personnels"
+    perso_lead: "Logiciel et simulation, en dehors du cadre professionnel."
+    highlights: "Points clés"
+    stack: "Stack"
+    private: "Dépôt privé"
+    source: "Code source"
+    demo: "Démo"
+    count: "projets"
+
+  vendors:
+    title: "Éditeurs"
+    lead: "Certifications et solutions administrées en production en ESN / MSSP : ce que je maîtrise, éditeur par éditeur, et les projets qui le prouvent."
+    tabs: "Éditeurs"
+    count: "éditeurs"
+    certified: "Certifié"
+    field: "Pratique terrain"
+    field_body: "Pas de certification éditeur à ce jour : solution administrée en production sur des parcs clients."
+    certs: "Certification"
+    products: "Produits administrés"
+    points: "Réalisations"
+    projects: "Projets liés"
+
+  contact:
+    title: "Me <em>contacter</em>."
+    lead: "Pour tout échange professionnel."
+    email: "Envoyer un e-mail"
+    github: "GitHub"
+    linkedin: "LinkedIn"
+    fallback: "Le plus simple pour me joindre reste GitHub."
+
+  footer:
+    built: "Site statique en Jekyll, hébergé sur GitHub Pages."
+
+  notfound:
+    title: "Page introuvable"
+    lead: "Cette adresse ne mène à rien. La page d'accueil, elle, existe toujours."
+    cta: "Retour à l'accueil"
+
+en:
+  code: "en"
+  locale: "en_GB"
+  label: "English"
+  alt_code: "fr"
+  alt_label: "Français"
+  alt_title: "Passer en français"
+  skip: "Skip to content"
+  theme_toggle: "Toggle theme"
+  breadcrumb: "Breadcrumb"
+
+  # URL of each page in this language (used by the navigation)
+  routes:
+    home: "/en/"
+    projects: "/en/projects/"
+    vendors: "/en/vendors/"
+    skills: "/en/skills/"
+    experience: "/en/experience/"
+
+  nav:
+    label: "Main navigation"
+    home: "Home"
+    projects: "Projects"
+    vendors: "Vendors"
+    skills: "Skills"
+    experience: "Experience"
+    contact: "Contact"
+
+  hero:
+    kicker: "Fortinet · Network · Security · SOC"
+    title: "<em>Cybersecurity</em> & <em>Network</em> Engineer"
+    lead: >
+      Designing, evolving and securing network, security and cloud architectures
+      at an MSP / MSSP. Fortinet certified (FCP), I administer solutions from seven
+      vendors day to day, from the firewall to the SOC, and lead migration,
+      industrialisation and monitoring projects across client estates.
+    cta_primary: "View projects"
+    cta_secondary: "Vendors & certifications"
+    facts:
+      - value: "4 yrs"
+        label: "at a cybersecurity MSP / MSSP"
+      - value: "L3"
+        label: "last escalation level for incidents"
+      - value: "FCP"
+        label: "Fortinet Certified Professional"
+      - value: "7"
+        label: "vendors run in production"
+    sim_title: "perfect-gas-2d"
+    sim_live: "live simulation"
+    sim_atoms: "atoms"
+    sim_hits: "wall collisions"
+    sim_hist: "speed distribution"
+
+  home:
+    explore_kicker: "At a glance"
+    explore_title: "Projects, vendors, experience."
+    explore_lead: "The essentials, in three pages."
+    projects_body: "Network & security engagements delivered at an MSP across client estates, and personal projects."
+    vendors_body: "Certifications and solutions run in production, vendor by vendor, starting with Fortinet."
+    experience_body: "Four roles at a cybersecurity MSP / MSSP, a network & cybersecurity architect professional title, a physics degree."
+    skills_body: "Networking, perimeter security, endpoint, SOC, automation."
+    certs_kicker: "Certifications"
+    certs_title: "<em>Vendor</em> certified."
+    certs_cta: "All vendors"
+    current: "Current"
+
+  experience:
+    title: "Experience"
+    lead: >
+      With a background in physics, I moved into systems, networking and
+      cybersecurity. I design, evolve and secure network, security and cloud
+      architectures, and administer client solutions and shared platforms,
+      SOC on-call duty included.
+    roles_title: "Roles"
+    education_title: "Education"
+    certs_title: "Certifications"
+    certs_more: "Details by vendor"
+    languages_title: "Languages"
+    current: "Present"
+
+  skills:
+    title: "Skills"
+    lead: "Technical domains and soft skills, as practised at an MSP / MSSP. Vendor details have their own page."
+    domains_title: "Technical domains"
+    vendors_title: "Vendor solutions"
+    vendors_lead: "Certifications, products run in production and achievements, vendor by vendor."
+    soft_title: "Soft skills"
+
+  projects:
+    title: "Projects"
+    lead: "Network & security engagements delivered at an MSP across client estates (anonymised), and personal projects carried out alongside."
+    pro_title: "MSP engagements"
+    pro_lead: "Projects delivered across client estates, no client names."
+    perso_title: "Personal projects"
+    perso_lead: "Software and simulation, outside of work."
+    highlights: "Highlights"
+    stack: "Stack"
+    private: "Private repository"
+    source: "Source code"
+    demo: "Live demo"
+    count: "projects"
+
+  vendors:
+    title: "Vendors"
+    lead: "Certifications and solutions run in production at an MSP / MSSP: what I master, vendor by vendor, and the projects that back it up."
+    tabs: "Vendors"
+    count: "vendors"
+    certified: "Certified"
+    field: "Field experience"
+    field_body: "No vendor certification yet: solution run in production across client estates."
+    certs: "Certification"
+    products: "Products run in production"
+    points: "Achievements"
+    projects: "Related projects"
+
+  contact:
+    title: "Get in <em>touch</em>."
+    lead: "For any professional enquiry."
+    email: "Send an email"
+    github: "GitHub"
+    linkedin: "LinkedIn"
+    fallback: "The easiest way to reach me is through GitHub."
+
+  footer:
+    built: "Static site built with Jekyll, hosted on GitHub Pages."
+
+  notfound:
+    title: "Page not found"
+    lead: "This address leads nowhere. The home page, however, still exists."
+    cta: "Back to home"

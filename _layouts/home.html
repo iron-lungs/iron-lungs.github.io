@@ -1,0 +1,127 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+
+<!-- ── Carte de visite ───────────────────────────────────── -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="kicker">{{ t.hero.kicker }}</p>
+      <h1>{{ t.hero.title }}</h1>
+      <p class="lead">{{ t.hero.lead }}</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{ t.routes.projects | relative_url }}">{{ t.hero.cta_primary }}{% include icon.html name="arrow" %}</a>
+        <a class="btn" href="{{ t.routes.vendors | relative_url }}">{{ t.hero.cta_secondary }}</a>
+      </div>
+    </div>
+
+    <!-- Simulation du projet « gaz parfait 2D », animée par main.js -->
+    <figure class="sim" aria-hidden="true">
+      <figcaption class="sim-bar">
+        <span class="sim-file">{{ t.hero.sim_title }}.m</span>
+        <span class="sim-live"><span class="dot"></span>{{ t.hero.sim_live }}</span>
+      </figcaption>
+      <canvas class="sim-canvas" data-hist="{{ t.hero.sim_hist }}"></canvas>
+      <div class="sim-stats">
+        <span><b data-sim="n">120</b> {{ t.hero.sim_atoms }}</span>
+        <span><b data-sim="hits">0</b> {{ t.hero.sim_hits }}</span>
+      </div>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <dl class="facts">
+      {% for f in t.hero.facts %}
+      <div><dt>{{ f.value }}</dt><dd>{{ f.label }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+<!-- ── Certifications éditeurs ───────────────────────────── -->
+<section class="section section-alt certs-band">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker">{{ t.home.certs_kicker }}</p>
+      <h2>{{ t.home.certs_title }}</h2>
+    </header>
+    <div class="certs-row">
+      {% for v in site.data.editeurs %}{% for c in v.certs %}
+      <a class="card cert-card cert-link reveal" href="{{ t.routes.vendors | append: '#' | append: v.slug | relative_url }}">
+        <div class="cert-top">
+          <span class="cv-icon">{% include icon.html name="award" %}</span>
+          <span class="meta">{{ v.name }} · {{ c.date }}</span>
+        </div>
+        <h3>{{ c.name }}</h3>
+        {% if c.parts.size > 0 %}
+        <ul class="cert-parts">{% for part in c.parts %}<li>{{ part }}</li>{% endfor %}</ul>
+        {% else %}
+        <p class="muted small">{{ c.track }}</p>
+        {% endif %}
+      </a>
+      {% endfor %}{% endfor %}
+    </div>
+    <p class="certs-more reveal"><a class="link" href="{{ t.routes.vendors | relative_url }}">{{ t.home.certs_cta }}{% include icon.html name="arrow" %}</a></p>
+  </div>
+</section>
+
+<!-- ── Portes d'entrée : Projets / Éditeurs / Parcours ───── -->
+<section id="explore" class="section">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker">{{ t.home.explore_kicker }}</p>
+      <h2>{{ t.home.explore_title }}</h2>
+      <p class="lead">{{ t.home.explore_lead }}</p>
+    </header>
+
+    <div class="doors">
+      <a class="card door reveal" href="{{ t.routes.projects | relative_url }}">
+        <div class="door-top">
+          <span class="door-count">01</span>
+          <span class="door-go">{% include icon.html name="arrow" %}</span>
+        </div>
+        <h3>{{ t.nav.projects }}</h3>
+        <p>{{ t.home.projects_body }}</p>
+        <ul class="door-list">
+          {% assign pro = site.data.projects | where: "kind", "pro" %}
+          {% for project in pro limit: 4 %}
+          <li><span>{{ project[page.lang].title }}</span>{% assign v = site.data.editeurs | where: "slug", project.vendors[0] | first %}<span class="meta">{{ v.name }}</span></li>
+          {% endfor %}
+        </ul>
+      </a>
+
+      <a class="card door reveal" href="{{ t.routes.vendors | relative_url }}">
+        <div class="door-top">
+          <span class="door-count">02</span>
+          <span class="door-go">{% include icon.html name="arrow" %}</span>
+        </div>
+        <h3>{{ t.nav.vendors }}</h3>
+        <p>{{ t.home.vendors_body }}</p>
+        <ul class="door-list">
+          {% for v in site.data.editeurs limit: 4 %}
+          <li><span>{{ v.name }}</span>{% if v.certs.size > 0 %}<span class="meta meta-accent">{{ t.vendors.certified }}</span>{% else %}<span class="meta">{{ v[page.lang].domain | split: ' · ' | first }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </a>
+
+      <a class="card door reveal" href="{{ t.routes.experience | relative_url }}">
+        <div class="door-top">
+          <span class="door-count">03</span>
+          <span class="door-go">{% include icon.html name="arrow" %}</span>
+        </div>
+        <h3>{{ t.nav.experience }}</h3>
+        <p>{{ t.home.experience_body }}</p>
+        <ul class="door-list">
+          {% for role in site.data.cv.experience limit: 3 %}
+          <li><span>{{ role[page.lang].title }}</span><span class="meta">{{ role.start | split: '/' | last }}</span></li>
+          {% endfor %}
+        </ul>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ───────────────────────────────────────────── -->
+{% include contact.html %}

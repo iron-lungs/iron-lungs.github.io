@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign sk = site.data.skills %}
+{% assign sk_vendors = site.data.editeurs %}
+{% include page-head.html title=t.skills.title lead=t.skills.lead %}
+
+<!-- ── Domaines techniques ───────────────────────────────── -->
+<section class="section section-tight">
+  <div class="wrap">
+    <h2 class="block-title reveal">{{ t.skills.domains_title }}</h2>
+    <div class="grid-3">
+      {% for d in sk.domains %}
+      <article class="card service reveal">
+        <div class="service-top">
+          <span class="service-icon">{% include icon.html name=d.icon %}</span>
+          <span class="meta">{{ forloop.index | prepend: '0' }}</span>
+        </div>
+        <h3>{{ d[page.lang].title }}</h3>
+        <ul class="chips">
+          {% for i in d[page.lang].items %}<li>{{ i }}</li>{% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── Solutions éditeurs → page Éditeurs ────────────────── -->
+<section class="section section-alt">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <h2 class="block-title">{{ t.skills.vendors_title }}</h2>
+      <p class="muted">{{ t.skills.vendors_lead }}</p>
+    </header>
+    <ul class="vendor-links reveal">
+      {% for v in sk_vendors %}
+      <li>
+        <a href="{{ t.routes.vendors | append: '#' | append: v.slug | relative_url }}">
+          <span class="vl-name">{{ v.name }}</span>
+          <span class="meta">{% if v.certs.size > 0 %}<b>{{ site.data.i18n[page.lang].vendors.certified }}</b> · {% endif %}{{ v[page.lang].domain }}</span>
+          {% include icon.html name="arrow" %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ── Compétences transversales ─────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="block-title reveal">{{ t.skills.soft_title }}</h2>
+    <ul class="soft reveal">
+      {% for s in sk.soft[page.lang] %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include contact.html %}
