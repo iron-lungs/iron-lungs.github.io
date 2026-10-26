@@ -18,6 +18,11 @@ layout: default
           <span class="meta">{{ forloop.index | prepend: '0' }}</span>
         </div>
         <h3>{{ d[page.lang].title }}</h3>
+        {% if d.level %}
+        <p class="level level-{{ d.level }}">
+          <span class="level-dots" aria-hidden="true"><i></i><i></i><i></i></span>{{ t.skills.levels[d.level] }}
+        </p>
+        {% endif %}
         <ul class="chips">
           {% for i in d[page.lang].items %}<li>{{ i }}</li>{% endfor %}
         </ul>

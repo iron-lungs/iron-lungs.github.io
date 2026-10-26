@@ -89,6 +89,9 @@ fr:
     title: "Compétences"
     lead: "Domaines techniques et compétences transversales, tels que pratiqués en environnement ESN / MSSP. Le détail par éditeur a sa propre page."
     domains_title: "Domaines techniques"
+    levels:
+      expert: "Expert"
+      intermediate: "Intermédiaire"
     vendors_title: "Solutions éditeurs"
     vendors_lead: "Certifications, produits administrés et réalisations, éditeur par éditeur."
     soft_title: "Compétences transversales"
@@ -220,6 +223,9 @@ en:
     title: "Skills"
     lead: "Technical domains and soft skills, as practised at an MSP / MSSP. Vendor details have their own page."
     domains_title: "Technical domains"
+    levels:
+      expert: "Expert"
+      intermediate: "Intermediate"
     vendors_title: "Vendor solutions"
     vendors_lead: "Certifications, products run in production and achievements, vendor by vendor."
     soft_title: "Soft skills"

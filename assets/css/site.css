@@ -374,6 +374,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .service-icon .ic { width: 1.35rem; height: 1.35rem; }
 
+/* Pastille de maîtrise (domaines techniques) */
+.level {
+  display: inline-flex; align-items: center; gap: .5rem; margin: .1rem 0 1rem;
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .04em; color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: var(--glow); border-radius: 999px; padding: .22rem .7rem .22rem .55rem;
+}
+.level-dots { display: inline-flex; gap: .2rem; }
+.level-dots i { width: .38rem; height: .38rem; border-radius: 50%; background: currentColor; }
+.level-intermediate { color: var(--text-dim); border-color: var(--border-hi); background: transparent; }
+.level-intermediate .level-dots i:last-child { background: transparent; box-shadow: 0 0 0 1px currentColor inset; }
+
 /* Méthode */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem 1.5rem; }
 @media (min-width: 640px) { .steps { grid-template-columns: repeat(2, 1fr); } }

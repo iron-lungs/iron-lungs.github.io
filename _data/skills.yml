@@ -1,12 +1,14 @@
 # ─────────────────────────────────────────────────────────────
 #  Compétences (page /competences/), en français et en anglais.
-#  domains  → grands domaines techniques (icône + mots-clés)
+#  domains  → grands domaines techniques (icône + niveau + mots-clés)
+#             level : "expert" ou "intermediate" (libellés dans _data/i18n.yml)
 #  soft     → compétences transversales
 #  (les solutions éditeurs sont dans _data/editeurs.yml)
 # ─────────────────────────────────────────────────────────────
 
 domains:
   - icon: "network"
+    level: "expert"
     fr:
       title: "Réseaux & Cisco"
       items: ["Routage", "Commutation", "VLAN / Trunk", "Routage inter-VLAN", "OSPF", "EtherChannel / Eth-Trunk", "ACL", "NAT / PAT", "DHCP", "WLAN", "NAC", "Cisco IOS"]
@@ -14,6 +16,7 @@ domains:
       title: "Networking & Cisco"
       items: ["Routing", "Switching", "VLAN / Trunk", "Inter-VLAN routing", "OSPF", "EtherChannel / Eth-Trunk", "ACL", "NAT / PAT", "DHCP", "WLAN", "NAC", "Cisco IOS"]
   - icon: "shield"
+    level: "expert"
     fr:
       title: "Sécurité périmétrique & accès"
       items: ["Pare-feu NGFW", "VPN SSL / IPSec", "ZTNA", "Security Fabric", "PAM & Bastion"]
@@ -21,6 +24,7 @@ domains:
       title: "Perimeter security & access"
       items: ["NGFW firewalls", "SSL / IPsec VPN", "ZTNA", "Security Fabric", "PAM & Bastion"]
   - icon: "lock"
+    level: "expert"
     fr:
       title: "Endpoint & messagerie"
       items: ["EDR / XDR", "Anti-spam", "SPF / DKIM / DMARC", "Protection des serveurs"]
@@ -28,6 +32,7 @@ domains:
       title: "Endpoint & email"
       items: ["EDR / XDR", "Anti-spam", "SPF / DKIM / DMARC", "Server protection"]
   - icon: "radar"
+    level: "expert"
     fr:
       title: "SOC & supervision"
       items: ["SIEM", "Gestion d'incidents", "Réponse en astreinte", "Supervision par sondes", "Notifications dynamiques"]
@@ -35,6 +40,7 @@ domains:
       title: "SOC & monitoring"
       items: ["SIEM", "Incident management", "On-call response", "Probe-based monitoring", "Dynamic notifications"]
   - icon: "code"
+    level: "intermediate"
     fr:
       title: "Automatisation & API"
       items: ["Python", "Analyse PCAP", "FortiAPI", "API REST", "Power Automate", "MATLAB", "Fortran"]
@@ -42,6 +48,7 @@ domains:
       title: "Automation & APIs"
       items: ["Python", "PCAP analysis", "FortiAPI", "REST APIs", "Power Automate", "MATLAB", "Fortran"]
   - icon: "flow"
+    level: "expert"
     fr:
       title: "Méthodes"
       items: ["MCO / MCS", "Incidents N0 → N3", "ESN / MSSP", "Audits & remédiation", "ITSM", "COMOP / COPIL", "Amélioration continue"]
