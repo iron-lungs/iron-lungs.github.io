@@ -80,6 +80,8 @@ img { max-width: 100%; height: auto; display: block; }
 ul { margin: 0; padding: 0; list-style: none; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
+[hidden] { display: none !important; }
+
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
 .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
@@ -171,12 +173,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero h1 { margin-bottom: 1.4rem; }
 .hero .lead { margin-bottom: 2rem; }
 
-.pill {
-  display: inline-flex; align-items: center; gap: .55rem;
-  font-size: .82rem; color: var(--text-dim);
-  border: 1px solid var(--border); background: var(--surface);
-  padding: .32rem .8rem .32rem .65rem; border-radius: 999px; margin: 0 0 1.6rem;
-}
 .dot {
   width: .45rem; height: .45rem; border-radius: 50%; background: var(--ok); flex: none;
   animation: ping 2.4s ease-out infinite;
@@ -359,7 +355,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .link { display: inline-flex; align-items: center; gap: .45rem; font-size: .88rem; font-weight: 500; }
 .link-muted { color: var(--text-dim); }
 
-/* Prestations */
+/* Domaines techniques (page Compétences) */
 .grid-3 { display: grid; gap: 1.25rem; }
 @media (min-width: 820px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
 .service { padding: 1.8rem; }
@@ -385,15 +381,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .level-dots i { width: .38rem; height: .38rem; border-radius: 50%; background: currentColor; }
 .level-intermediate { color: var(--text-dim); border-color: var(--border-hi); background: transparent; }
 .level-intermediate .level-dots i:last-child { background: transparent; box-shadow: 0 0 0 1px currentColor inset; }
-
-/* Méthode */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem 1.5rem; }
-@media (min-width: 640px) { .steps { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 980px) { .steps { grid-template-columns: repeat(4, 1fr); } }
-.step { border-top: 1px solid var(--border-hi); padding-top: 1.4rem; }
-.step h3 { font-size: 1.1rem; }
-.step p { color: var(--text-dim); font-size: .94rem; margin: 0; }
-.step-num { display: block; font-family: var(--serif); font-style: italic; font-size: 2.8rem; line-height: 1; color: var(--accent); margin-bottom: 1rem; }
 
 /* Titres de blocs (pages intérieures) */
 .block-title { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 1.8rem; }
@@ -569,16 +556,6 @@ a.badge:hover { text-decoration: none; border-color: var(--accent); }
   border: 1px solid var(--border-hi); background: var(--surface);
 }
 
-/* ── Parcours ────────────────────────────────────────────── */
-.about { display: grid; gap: 3rem; align-items: start; }
-@media (min-width: 900px) { .about { grid-template-columns: 1.1fr .9fr; gap: 4.5rem; } }
-.about-skills { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; }
-.about-skills .micro { margin-top: 0; }
-.skills { margin: 0; display: grid; gap: 1.25rem; }
-.skills > div + div { padding-top: 1.25rem; border-top: 1px solid var(--border); }
-.skills dt { font-size: .9rem; font-weight: 600; margin-bottom: .6rem; }
-.skills dd { margin: 0; }
-
 /* ── Contact ─────────────────────────────────────────────── */
 .contact-panel {
   position: relative; overflow: hidden; text-align: center;
@@ -623,7 +600,7 @@ a.badge:hover { text-decoration: none; border-color: var(--accent); }
   .vendor-tabs { top: 6.6rem; }
   .vendor-sec { scroll-margin-top: 10.5rem; }
   .mission, .cert-card { padding: 1.4rem; }
-  .door, .service, .about-skills { padding: 1.4rem; }
+  .door, .service { padding: 1.4rem; }
   .project-body { padding: 1.5rem 1.4rem; }
 }
 

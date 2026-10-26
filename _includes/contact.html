@@ -8,17 +8,17 @@
 
       <div class="cta-row center-row">
         {% if site.owner.email != "" %}
-          <a class="btn btn-primary" href="mailto:{{ site.owner.email }}">{% include icon.html name="mail" %}{{ t.contact.email }}</a>
+          {% comment %} Adresse jamais écrite en clair : les deux moitiés, inversées, sont
+             réassemblées par main.js. Sans JavaScript, le bouton reste masqué. {% endcomment %}
+          {% assign mail = site.owner.email | split: '@' %}
+          <a class="btn btn-primary js-mail" href="#contact" hidden
+             data-u="{{ mail[0] | split: '' | reverse | join: '' }}"
+             data-d="{{ mail[1] | split: '' | reverse | join: '' }}">{% include icon.html name="mail" %}{{ t.contact.email }}</a>
         {% endif %}
-        <a class="btn {% if site.owner.email == "" %}btn-primary{% endif %}" href="https://github.com/{{ site.owner.github }}">{% include icon.html name="github" %}{{ t.contact.github }}</a>
-        {% if site.owner.linkedin != "" %}
-          <a class="btn" href="{{ site.owner.linkedin }}">{% include icon.html name="linkedin" %}{{ t.contact.linkedin }}</a>
-        {% endif %}
+        <a class="btn{% if site.owner.email == "" %} btn-primary{% endif %}" href="https://github.com/{{ site.owner.github }}">{% include icon.html name="github" %}{{ t.contact.github }}</a>
       </div>
 
-      {% if site.owner.email == "" %}
-      <p class="muted small">{{ t.contact.fallback }}</p>
-      {% endif %}
+      <noscript><p class="muted small">{{ t.contact.fallback }}</p></noscript>
     </div>
   </div>
 </section>

@@ -14,6 +14,13 @@
     });
   }
 
+  /* ── Bouton e-mail : adresse réassemblée ici, absente du HTML ─ */
+  var flip = function (str) { return str.split('').reverse().join(''); };
+  document.querySelectorAll('.js-mail').forEach(function (a) {
+    a.href = 'mailto:' + flip(a.dataset.u) + '@' + flip(a.dataset.d);
+    a.hidden = false;
+  });
+
   /* ── Apparition des blocs au défilement ─────────────────── */
   var blocks = document.querySelectorAll('.reveal');
 

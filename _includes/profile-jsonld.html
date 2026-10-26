@@ -1,0 +1,31 @@
+{% comment %} Données structurées schema.org (pages d'accueil) : profil professionnel,
+   métier, domaines et certifications, tirés de _data/. Aucune donnée personnelle. {% endcomment %}
+{% assign t = site.data.i18n[page.lang] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": {{ t.code | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ site.owner.name | jsonify }},
+    "jobTitle": {{ t.hero.title | strip_html | jsonify }},
+    "sameAs": [{{ 'https://github.com/' | append: site.owner.github | jsonify }}],
+    "knowsAbout": [{% for d in site.data.skills.domains %}{{ d[page.lang].title | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "hasCredential": [
+      {% for v in site.data.editeurs %}{% for c in v.certs %}{
+        "@type": "EducationalOccupationalCredential",
+        "name": {{ c.name | jsonify }},
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": {{ v.name | jsonify }} }
+      },
+      {% endfor %}{% endfor %}{% for e in site.data.cv.education %}{% if e.code %}{
+        "@type": "EducationalOccupationalCredential",
+        "name": {{ e[page.lang].title | append: ' — ' | append: e.code | jsonify }},
+        "credentialCategory": "degree"
+      }{% endif %}{% endfor %}
+    ]
+  }
+}
+</script>

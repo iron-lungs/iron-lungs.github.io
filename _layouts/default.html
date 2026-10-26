@@ -9,7 +9,9 @@
   <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
   <link rel="alternate" hreflang="{{ t.code }}" href="{{ page.url | absolute_url }}">
   <link rel="alternate" hreflang="{{ t.alt_code }}" href="{{ page.alt_url | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{% if t.code == 'fr' %}{{ page.url | absolute_url }}{% else %}{{ page.alt_url | absolute_url }}{% endif %}">
   {% seo %}
+  {% if page.layout == 'home' %}{% include profile-jsonld.html %}{% endif %}
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">

@@ -1,0 +1,8 @@
+{% comment %}
+  Remplace les compteurs d'un texte de _data/i18n.yml par leur valeur, calculée
+  depuis les données à chaque build (donc à chaque push).
+  Paramètre : include.text.  Jetons : %years% %vendors% %certs% %missions% %roles%
+  - years    : années pleines depuis le premier poste (_data/cv.yml)
+  - vendors  : éditeurs de _data/editeurs.yml ; certs : certifications
+  - missions : projets kind "pro" ; roles : postes de _data/cv.yml
+{% endcomment %}{% assign first = site.data.cv.experience | last %}{% assign fs = first.start | split: '/' %}{% assign now_y = site.time | date: '%Y' | plus: 0 %}{% assign now_m = site.time | date: '%m' | plus: 0 %}{% assign months = now_y | times: 12 | plus: now_m %}{% assign start = fs[1] | plus: 0 | times: 12 | plus: fs[0] %}{% assign years = months | minus: start | divided_by: 12 %}{% assign certs = 0 %}{% for v in site.data.editeurs %}{% assign certs = certs | plus: v.certs.size %}{% endfor %}{% assign missions = site.data.projects | where: "kind", "pro" %}{{ include.text | replace: '%years%', years | replace: '%vendors%', site.data.editeurs.size | replace: '%certs%', certs | replace: '%missions%', missions.size | replace: '%roles%', site.data.cv.experience.size }}

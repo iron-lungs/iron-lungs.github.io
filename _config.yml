@@ -18,8 +18,22 @@ lang: fr
 owner:
   name: "Iron-lungs"      # pseudonyme uniquement
   github: "iron-lungs"
-  email: "verbe_meduses2y@icloud.com"               # à renseigner — vide = adresse non publiée
-  linkedin: ""            # vide = non affiché (l'URL actuelle contient des initiales)
+  email: "verbe_meduses2y@icloud.com"   # vide = non publiée ; jamais en clair dans le HTML (voir contact.html)
+
+# ─────────────────────────────────────────────────────────────
+#  Aperçu des liens partagés (LinkedIn, Teams, Slack, messageries…)
+#  Image 1200 × 630 par langue, lue par jekyll-seo-tag.
+# ─────────────────────────────────────────────────────────────
+twitter:
+  card: summary_large_image
+
+defaults:
+  - scope: { path: "" }
+    values:
+      image: { path: "/assets/img/og-fr.png", width: 1200, height: 630 }
+  - scope: { path: "en" }
+    values:
+      image: { path: "/assets/img/og-en.png", width: 1200, height: 630 }
 
 # ─────────────────────────────────────────────────────────────
 #  Build (plugins autorisés par GitHub Pages)
@@ -34,6 +48,7 @@ exclude:
   - vendor
   - docs
   - README.md
+  - TODO.md
   - .jekyll-cache
   - LICENSE
   - Dockerfile

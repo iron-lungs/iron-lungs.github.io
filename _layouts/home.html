@@ -9,7 +9,7 @@ layout: default
     <div class="hero-text">
       <p class="kicker">{{ t.hero.kicker }}</p>
       <h1>{{ t.hero.title }}</h1>
-      <p class="lead">{{ t.hero.lead }}</p>
+      <p class="lead">{% include fill.html text=t.hero.lead %}</p>
 
       <div class="cta-row">
         <a class="btn btn-primary" href="{{ t.routes.projects | relative_url }}">{{ t.hero.cta_primary }}{% include icon.html name="arrow" %}</a>
@@ -34,7 +34,7 @@ layout: default
   <div class="wrap">
     <dl class="facts">
       {% for f in t.hero.facts %}
-      <div><dt>{{ f.value }}</dt><dd>{{ f.label }}</dd></div>
+      <div><dt>{% include fill.html text=f.value %}</dt><dd>{{ f.label }}</dd></div>
       {% endfor %}
     </dl>
   </div>
@@ -83,7 +83,7 @@ layout: default
           <span class="door-go">{% include icon.html name="arrow" %}</span>
         </div>
         <h3>{{ t.nav.projects }}</h3>
-        <p>{{ t.home.projects_body }}</p>
+        <p>{% include fill.html text=t.home.projects_body %}</p>
         <ul class="door-list">
           {% assign pro = site.data.projects | where: "kind", "pro" %}
           {% for project in pro limit: 4 %}
@@ -98,7 +98,7 @@ layout: default
           <span class="door-go">{% include icon.html name="arrow" %}</span>
         </div>
         <h3>{{ t.nav.vendors }}</h3>
-        <p>{{ t.home.vendors_body }}</p>
+        <p>{% include fill.html text=t.home.vendors_body %}</p>
         <ul class="door-list">
           {% for v in site.data.editeurs limit: 4 %}
           <li><span>{{ v.name }}</span>{% if v.certs.size > 0 %}<span class="meta meta-accent">{{ t.vendors.certified }}</span>{% else %}<span class="meta">{{ v[page.lang].domain | split: ' · ' | first }}</span>{% endif %}</li>
@@ -112,7 +112,7 @@ layout: default
           <span class="door-go">{% include icon.html name="arrow" %}</span>
         </div>
         <h3>{{ t.nav.experience }}</h3>
-        <p>{{ t.home.experience_body }}</p>
+        <p>{% include fill.html text=t.home.experience_body %}</p>
         <ul class="door-list">
           {% for role in site.data.cv.experience limit: 3 %}
           <li><span>{{ role[page.lang].title }}</span><span class="meta">{{ role.start | split: '/' | last }}</span></li>
